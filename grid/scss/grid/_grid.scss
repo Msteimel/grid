@@ -1,0 +1,16 @@
+.grid {
+	margin-right: auto;
+  	margin-left: auto;
+	max-width: 1180px;
+}
+
+
+// this is just notes, will need to be improved/fixed
+
+	// total col width = 95px
+	// gutter width =11.25 (each side) *2 == 22.5px
+	// col width = 70px
+
+.col-1 {
+	width: calc(1/12*100%);
+}
