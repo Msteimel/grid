@@ -1,0 +1,35 @@
+.grid-12 {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1180px;
+  width: 96%; }
+  .grid-12 [class*=col-] {
+    box-sizing: border-box;
+    float: left;
+    padding-left: 11.25px;
+    padding-right: 11.25px; }
+  .grid-12 .col-1 {
+    width: 8.33333%; }
+  .grid-12 .col-2 {
+    width: 16.66667%; }
+  .grid-12 .col-3 {
+    width: 25%; }
+  .grid-12 .col-4 {
+    width: 33.33333%; }
+  .grid-12 .col-5 {
+    width: 41.66667%; }
+  .grid-12 .col-6 {
+    width: 50%; }
+  .grid-12 .col-7 {
+    width: 58.33333%; }
+  .grid-12 .col-8 {
+    width: 66.66667%; }
+  .grid-12 .col-9 {
+    width: 75%; }
+  .grid-12 .col-10 {
+    width: 83.33333%; }
+  .grid-12 .col-11 {
+    width: 91.66667%; }
+  .grid-12 .col-12 {
+    width: 100%; }
