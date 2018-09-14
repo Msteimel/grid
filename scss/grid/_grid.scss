@@ -17,8 +17,7 @@ $em-base: 16;
 	[class*=col-] {
 		box-sizing: border-box;
 		float: left;
-		padding-left: percentage(12/1140);
-		padding-right: percentage(12/1140);
+		padding: 0 percentage(12/1140);
 	}
 
 	.col-1 {

@@ -14,8 +14,7 @@
   .grid-12 [class*=col-] {
     box-sizing: border-box;
     float: left;
-    padding-left: 1.05263%;
-    padding-right: 1.05263%; }
+    padding: 0 1.05263%; }
   .grid-12 .col-1 {
     width: 8.33333%; }
   .grid-12 .col-2 {

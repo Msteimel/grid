@@ -1,31 +1,28 @@
 
 
+
 @mixin breakpoint($screen-width) {
+	$sm: 320px;
+	$mp: 600px;
+	$ml: 20px;
+	$tp: 25px;
+	$tl: 900px;
+	$dk: 1200px;
+	$lg: 1800px;
+
 	@if $screen-width == large {
 		@media (min-width: 1080px) { @content ; }
-	}
-
-	@else if $screen-width == desktop {
+	} @else if $screen-width == desktop {
 		@media (min-width: 64em) { @content ; }
-	}
-
-	@else if $screen-width == tablet-landscape {
+	} @else if $screen-width == tablet-landscape {
 		@media (min-width: 50em) { @content ; }
-	}
-
-	@else if $screen-width == tablet-portrait {
+	} @else if $screen-width == tablet-portrait {
 		@media (min-width: 37.5em) { @content ; }
-	}
-
-	@else if $screen-width == mobile-landscape {
+	} @else if $screen-width == mobile-landscape {
 		@media (max-width: 37.5em) { @content ; }
-	}
-
-	@else if $screen-width == mobile-portrait {
+	} @else if $screen-width == mobile-portrait {
 		@media (max-width: 37.5em) { @content ; }
-	}
-
-	@else if $screen-width == sm {
-		@media (max-width: 37.5em) { @content ; }
+	} @else if $screen-width == sm {
+		@media (max-width: $sm) { @content ; }
 	}
 }
