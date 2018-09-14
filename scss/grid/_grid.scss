@@ -5,6 +5,8 @@
 	// gutter width =11.25 (each side) *2 == 22.5px
 	// col width = 70px
 
+$em-base: 16;
+
 .grid-12 {
 	box-sizing: border-box;
 	margin-right: auto;
@@ -15,8 +17,8 @@
 	[class*=col-] {
 		box-sizing: border-box;
 		float: left;
-		padding-left: 11.25px;
-		padding-right: 11.25px;
+		padding-left: percentage(12/1140);
+		padding-right: percentage(12/1140);
 	}
 
 	.col-1 {
