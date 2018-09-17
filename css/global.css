@@ -1,41 +1,156 @@
+html, .root {
+  font-size: 16px;
+  line-height: 1.6; }
+
+body, .article {
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1.625em;
+  margin: auto; }
+
+h1, .h1 {
+  font-size: 4.125em;
+  line-height: 1.18181818em;
+  margin-top: 0.39393939em;
+  margin-bottom: 0.78787878em; }
+
+h2, .h2 {
+  font-size: 2.5625em;
+  line-height: 1.26829268em;
+  margin-top: 0.63414634em;
+  margin-bottom: 0.63414634em; }
+
+h3, .h3 {
+  font-size: 1.625em;
+  line-height: 1em;
+  margin-top: 1em;
+  margin-bottom: 0em; }
+
+h4, .h4 {
+  font-size: 1em;
+  line-height: 1.625em;
+  margin-top: 1.625em;
+  margin-bottom: 0em; }
+
+h5, .h5 {
+  font-size: 1em;
+  line-height: 1.625em;
+  margin-top: 1.625em;
+  margin-bottom: 0em; }
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0em;
+  margin-bottom: 1.625em; }
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em; }
+
+/* Let's make sure all's aligned */
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0; }
+
+a, b, i, strong, em, small, code {
+  line-height: 0; }
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
 .example-grid .example-col {
   background-color: #ccc;
   border: 1px solid #aaa;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   text-align: center; }
 
 .grid-12 {
+  *zoom: 1;
   box-sizing: border-box;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto;
   max-width: 1180px;
   width: 96%; }
+  .grid-12:before, .grid-12:after {
+    content: " ";
+    display: table; }
+  .grid-12:after {
+    clear: both; }
   .grid-12 [class*=col-] {
+    *zoom: 1;
     box-sizing: border-box;
     float: left;
     padding: 0 1.05263%; }
+    .grid-12 [class*=col-]:before, .grid-12 [class*=col-]:after {
+      content: " ";
+      display: table; }
+    .grid-12 [class*=col-]:after {
+      clear: both; }
+  .grid-12 [class*=offest-] {
+    *zoom: 1;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 1.05263%; }
+    .grid-12 [class*=offest-]:before, .grid-12 [class*=offest-]:after {
+      content: " ";
+      display: table; }
+    .grid-12 [class*=offest-]:after {
+      clear: both; }
   .grid-12 .col-1 {
     width: 8.33333%; }
+  .grid-12 .offset-1 {
+    margin-left: 8.33333%; }
   .grid-12 .col-2 {
     width: 16.66667%; }
+  .grid-12 .offset-2 {
+    margin-left: 16.66667%; }
   .grid-12 .col-3 {
     width: 25%; }
+  .grid-12 .offset-3 {
+    margin-left: 25%; }
   .grid-12 .col-4 {
     width: 33.33333%; }
+  .grid-12 .offset-4 {
+    margin-left: 33.33333%; }
   .grid-12 .col-5 {
     width: 41.66667%; }
+  .grid-12 .offset-5 {
+    margin-left: 41.66667%; }
   .grid-12 .col-6 {
     width: 50%; }
+  .grid-12 .offset-6 {
+    margin-left: 50%; }
   .grid-12 .col-7 {
     width: 58.33333%; }
+  .grid-12 .offset-7 {
+    margin-left: 58.33333%; }
   .grid-12 .col-8 {
     width: 66.66667%; }
+  .grid-12 .offset-8 {
+    margin-left: 66.66667%; }
   .grid-12 .col-9 {
     width: 75%; }
+  .grid-12 .offset-9 {
+    margin-left: 75%; }
   .grid-12 .col-10 {
     width: 83.33333%; }
+  .grid-12 .offset-10 {
+    margin-left: 83.33333%; }
   .grid-12 .col-11 {
     width: 91.66667%; }
+  .grid-12 .offset-11 {
+    margin-left: 91.66667%; }
   .grid-12 .col-12 {
     width: 100%; }
+  .grid-12 .offset-12 {
+    margin-left: 100%; }
+
+.container {
+  padding: 2em 0; }

@@ -1,7 +1,16 @@
 
 <?php include 'includes/global/head.php';?>
 
-<div class="grid-12 example-grid">
+<div class="grid-12 example-grid container">
+	<div class="col-12">
+		<h1>Another Grid Framework</h1>
+		<h2>Another Grid Framework</h2>
+		<h3>Another Grid Framework</h3>
+		<h4>Another Grid Framework</h4>
+		<h5>Another Grid Framework</h5>
+		<h6>Another Grid Framework</h6>
+	</div>
+
 	<div class="col-1">
 		<div class="example-col">1</div>
 	</div>
@@ -70,5 +79,14 @@
 	</div>
 	<div class="col-12">
 		<div class="example-col">12</div>
+	</div>
+</div>
+
+<div class="grid-12 example-grid container">
+	<div class="offset-1 col-11">
+		<div class="example-col">offset-1</div>
+	</div>
+	<div class="offset-2 col-10">
+		<div class="example-col">offset-2</div>
 	</div>
 </div>

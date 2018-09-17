@@ -6,65 +6,41 @@
 	// col width = 70px
 
 $em-base: 16;
+$grid-12: 12;
 
 .grid-12 {
+	@include clearfix;
 	box-sizing: border-box;
-	margin-right: auto;
-  	margin-left: auto;
+	margin: auto;
 	max-width: 1180px;
 	width: 96%;
 	
 	[class*=col-] {
+		@include clearfix;
 		box-sizing: border-box;
 		float: left;
 		padding: 0 percentage(12/1140);
 	}
 
-	.col-1 {
-		width: percentage(1/12);
+	[class*=offest-] {
+		@include clearfix;
+		box-sizing: border-box;
+		float: left;
+		padding: 0 percentage(12/1140);
 	}
 
-	.col-2 {
-		width: percentage(2/12);
-	}
+	@for $i from 1 through $grid-12 {
 
-	.col-3 {
-		width: percentage(3/12);
-	}
+		.col-#{$i} {
+			width: percentage($i/$grid-12); 
+		}
 
-	.col-4 {
-		width: percentage(4/12);
+		.offset-#{$i} { 
+			margin-left: percentage($i/$grid-12); 
+		}
 	}
+}
 
-	.col-5 {
-		width: percentage(5/12);
-	}
-
-	.col-6 {
-		width: percentage(6/12);
-	}
-
-	.col-7 {
-		width: percentage(7/12);
-	}
-
-	.col-8 {
-		width: percentage(8/12);
-	}
-
-	.col-9 {
-		width: percentage(9/12);
-	}
-
-	.col-10 {
-		width: percentage(10/12);
-	}
-
-	.col-11 {
-		width: percentage(11/12);
-	}
-
-	.col-12 {
-		width: percentage(12/12);
-	}
+.container {
+	padding: 2em 0;
 }
