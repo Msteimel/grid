@@ -7,6 +7,7 @@
   <!-- End Font Awesome -->
   <!-- Fonts-->
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Work+Sans" rel="stylesheet">
+ <title>Just My Practice Grid</title>
 
 
   <link rel="stylesheet" href="/css/global.css">

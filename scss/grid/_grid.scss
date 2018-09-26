@@ -15,20 +15,6 @@ $grid-12: 12;
 	max-width: 1180px;
 	width: 96%;
 	
-	[class*=col-] {
-		@include clearfix;
-		box-sizing: border-box;
-		float: left;
-		padding: 0 percentage(12/1140);
-	}
-
-	[class*=offest-] {
-		@include clearfix;
-		box-sizing: border-box;
-		float: left;
-		padding: 0 percentage(12/1140);
-	}
-
 	@for $i from 1 through $grid-12 {
 
 		.col-#{$i} {
@@ -37,6 +23,28 @@ $grid-12: 12;
 
 		.offset-#{$i} { 
 			margin-left: percentage($i/$grid-12); 
+		}
+	}
+
+	[class*=col-] {
+		@include clearfix;
+		box-sizing: border-box;
+		float: left;
+		padding: 0 percentage(12/1140);
+		
+		@include bp(ml) {
+			width: 100%;
+		}
+	}
+
+	[class*=offset-] {
+		@include clearfix;
+		box-sizing: border-box;
+		float: left;
+		padding: 0 percentage(12/1140);
+		
+		@include bp(ml) {
+			margin-left: 0;
 		}
 	}
 }

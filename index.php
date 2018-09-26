@@ -90,4 +90,31 @@
 	<div class="offset-2 col-10">
 		<div class="example-col">offset-2</div>
 	</div>
+	<div class="offset-3 col-9">
+		<div class="example-col">offset-3</div>
+	</div>
+	<div class="offset-4 col-8">
+		<div class="example-col">offset-4</div>
+	</div>
+	<div class="offset-5 col-7">
+		<div class="example-col">offset-5</div>
+	</div>
+	<div class="offset-6 col-6">
+		<div class="example-col">offset-6</div>
+	</div>
+	<div class="offset-7 col-5">
+		<div class="example-col">offset-7</div>
+	</div>
+	<div class="offset-8 col-4">
+		<div class="example-col">offset-8</div>
+	</div>
+	<div class="offset-9 col-3">
+		<div class="example-col">offset-9</div>
+	</div>
+	<div class="offset-10 col-2">
+		<div class="example-col">offset-10</div>
+	</div>
+	<div class="offset-11 col-1">
+		<div class="example-col">11</div>
+	</div>
 </div>

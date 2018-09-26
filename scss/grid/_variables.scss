@@ -1,4 +1,17 @@
 
+// Breakpoints
+$mp: 479;
+$ml: 667;
+$tp: 800;
+$tl: 1100;
+$dk: 1101;
 
+
+// Typography varaibles
 $line-height: 1.6;
 $em-base: 16;
+
+$min_width: ($ml/16)*1em;
+$max_width: ($dk/16)*1em;
+$min_font: 1em;
+$max_font: 1.5em ;

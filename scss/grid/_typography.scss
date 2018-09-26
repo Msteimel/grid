@@ -1,49 +1,51 @@
 
 html, .root {
-  font-size: ($em-base)px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
   line-height: $line-height;
 }
 
 body, .article {
   font-family: sans-serif;
   font-size: 1em;
+  // font-size: percentage($em-base/16);
   line-height: 1.625em;
   margin: auto;
 }
 h1, .h1 {
-  font-size: 4.125em;
-  line-height: 1.18181818em;
-  margin-top: 0.39393939em;
-  margin-bottom: 0.78787878em;
+  font-size: ($em-base/16)*4.25em;
+  line-height: 1.14705882em;
+  margin-top: 0.38235294em;
+  margin-bottom: 0.76470588em;
 }
 h2, .h2 {
-  font-size: 2.5625em;
-  line-height: 1.26829268em;
-  margin-top: 0.63414634em;
-  margin-bottom: 0.63414634em;
+  font-size: ($em-base/16)*2.625em;
+  line-height: 1.46808511em;
+  margin-top: 0.4893617em;
+  margin-bottom: 0.4893617em;
 }
 h3, .h3 {
-  font-size: 1.625em;
-  line-height: 1em;
-  margin-top: 1em;
+  font-size: ($em-base/16)*1.625em;
+  line-height: 1.5862069em;
+  margin-top: 0.79310345em;
   margin-bottom: 0em;
 }
 h4, .h4 {
-  font-size: 1em;
-  line-height: 1.625em;
-  margin-top: 1.625em;
+  font-size: ($em-base/16)*1.312em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 h5, .h5 {
-  font-size: 1em;
-  line-height: 1.625em;
-  margin-top: 1.625em;
+  font-size: ($em-base/16)*1.25em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 h6, .h6 {
-  font-size: 1em;
-  line-height: 1.625em;
-  margin-top: 1.625em;
+  font-size: ($em-base/16)*1.125em;
+  line-height: 1.27777778em;
+  margin-top: 1.27777778em;
+  margin-bottom: 0em;
   margin-bottom: 0em;
 }
 p, ul, ol, pre, table, blockquote {
