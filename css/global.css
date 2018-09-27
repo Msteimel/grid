@@ -1,3 +1,9 @@
+/*================================================
+					Breakpoints
+==================================================*/
+/*================================================
+				// Typography varaibles
+==================================================*/
 .grid-12 {
   *zoom: 1;
   box-sizing: border-box;
@@ -89,14 +95,6 @@
 
 html, .root {
   line-height: 1.6; }
-  html, .root {
-    font-size: 1em; }
-    @media screen and (min-width: 41.6875em) {
-      html, .root {
-        font-size: calc(1em + 0.5 * ((100vw - 41.6875em) / 27.125)); } }
-    @media screen and (min-width: 68.8125em) {
-      html, .root {
-        font-size: 1.5em; } }
 
 body, .article {
   font-family: sans-serif;
@@ -105,41 +103,49 @@ body, .article {
   margin: auto; }
 
 h1, .h1 {
-  font-size: 4.25em;
+  font-size: 3.71875em;
   line-height: 1.14705882em;
   margin-top: 0.38235294em;
   margin-bottom: 0.76470588em; }
 
 h2, .h2 {
-  font-size: 2.625em;
+  font-size: 2.29688em;
   line-height: 1.46808511em;
   margin-top: 0.4893617em;
   margin-bottom: 0.4893617em; }
 
 h3, .h3 {
-  font-size: 1.625em;
+  font-size: 1.42188em;
   line-height: 1.5862069em;
   margin-top: 0.79310345em;
   margin-bottom: 0em; }
 
 h4, .h4 {
-  font-size: 1.312em;
+  font-size: 1.148em;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em; }
 
 h5, .h5 {
-  font-size: 1.25em;
+  font-size: 1.09375em;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em; }
 
 h6, .h6 {
-  font-size: 1.125em;
+  font-size: 0.98438em;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
   margin-bottom: 0em; }
+
+p {
+  font-size: calc(1em + 0.5 * ((100vw - 41.6875em) / 0)); }
+
+@inlcude bp(min, ((calc($dk) + calc($ml)) / 2)) {
+  p {
+    font-size: calc($max-font-size)calc($min-font-size)/2;
+    font-size: calc(1em + 0.5 * ((100vw - 41.6875em) / 0)); } }
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

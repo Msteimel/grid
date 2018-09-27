@@ -1,5 +1,7 @@
 
-// Breakpoints
+/*================================================
+					Breakpoints
+==================================================*/
 $mp: 479;
 $ml: 667;
 $tp: 800;
@@ -7,11 +9,19 @@ $tl: 1100;
 $dk: 1101;
 
 
-// Typography varaibles
-$line-height: 1.6;
-$em-base: 16;
+/*================================================
+				// Typography varaibles
+==================================================*/
 
-$min_width: ($ml/16)*1em;
-$max_width: ($dk/16)*1em;
-$min_font: 1em;
-$max_font: 1.5em ;
+$line-height: 1.6;
+// sets font-size range
+$em-base: 14;
+$em-base-max: 20;
+
+// min-vw and max-vw for fluid font size
+$min-width: ($ml/16)*1em;
+$max-width: ($dk/16)*1em;
+
+// min and max font size for fluid font
+$min-font: ($em-base/16)*1em;
+$max-font: ($em-base-max/16)*1em ;

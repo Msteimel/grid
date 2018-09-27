@@ -1,6 +1,6 @@
 
 html, .root {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  // @include fluid-type($max-font, $max-font, $min-width, $max-width);
   line-height: $line-height;
 }
 
@@ -47,6 +47,10 @@ h6, .h6 {
   margin-top: 1.27777778em;
   margin-bottom: 0em;
   margin-bottom: 0em;
+}
+
+p{
+  @include fluid-type(1em, 1.5em);
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

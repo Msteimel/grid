@@ -1,19 +1,20 @@
 
 
-@mixin bp($screen-width) {
-	@if $screen-width == mp {
+
+@mixin bp($min, $viewport: null) {
+	@if $min == mp {
 		@media (max-width: ($mp/16)*1em) { @content ; }
 	} 
-	@else if $screen-width == ml {
+	@else if $min == ml {
 		@media (max-width: ($ml/16)*1em) { @content ; }
 	} 
-	@else if $screen-width == tp {
+	@else if $min == tp {
 		@media (max-width: ($tp/16)*1em) { @content ; }
 	} 
-	@else if $screen-width == tl {
+	@else if $min == tl {
 		@media (max-width: ($tl/16)*1em) { @content ; }
 	} 
-	@else if $screen-width == dk {
+	@else if $min == dk {
 		@media (min-width: ($dk/16)*1em) { @content ; }
 	} 
 }
@@ -36,21 +37,81 @@
   @return $value / ($value * 0 + 1);
 }
 
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+@mixin fluid-type($min-font-size, $max-font-size, $min-vw: $min-width,  $max-vw:$min-width) {
+	$responsive-calc: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+	// Makes sure units make
+  // $u1: unit($min-vw);
+  // $u2: unit($max-vw);
+  // $u3: unit($min-font-size);
+  // $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
-      font-size: $min-font-size;
-      @media screen and (min-width: $min-vw) {
-        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-      }
-      @media screen and (min-width: $max-vw) {
-        font-size: $max-font-size;
-      }
-    }
-  }
+  // @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  //   & {
+      font-size: $responsive-calc;
+      
+		@include bp(min, calc($ml)) {
+			font-size: $responsive-calc;
+		}
+
+		@inlcude bp(min, ((calc($dk) + calc($ml)) / 2)) {
+	        font-size: (calc($max-font-size) + calc($min-font-size)) / 2;
+        	font-size: $responsive-calc;
+		}
+
+	    @include bp(min, rem-calc($dk)) {
+       		font-size: calc($max-font-size);
+    	}
+
+      // @media screen and (min-width: $min-vw) {
+      //   font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      // }
+      // @media screen and (min-width: $max-vw) {
+      //   font-size: $max-font-size;
+      // }
+  //   }
+  // }
 }
+
+// Responsive Typography -- KYLES MIXIN
+// "min-font-size-px" + ("max-font-size" - "min-font-size") * (100vw - "min-screen-size-px") / ("max-screen-size" - "min-screen-size")
+// @mixin r-font-size($14px, $22px, $min-screen: 320px, $max-screen: 1920px) {
+//     $responsive-calc: calc(#{px-calc($14px)} + (#{strip-units(px-calc($22px))} - #{strip-units(px-calc($14px))}) * (100vw - #{px-calc($320px)}) / (#{strip-units(px-calc($1920))} - #{strip-units(px-calc($320px))}));
+//     font-size: rem-calc($14px);
+
+//     // Min width
+//     @include bp(min, calc($ml)) {
+//         font-size: $responsive-calc;
+//     }
+
+//     // Halfway point
+//     @include bp(min, ((rem-calc($1920) + rem-calc($320px)) / 2)) {
+//         font-size: (rem-calc($22px) + rem-calc($min-font)) / 2;
+//         font-size: $responsive-calc;
+//     }
+
+//     // Max width
+//     @include bp(min, rem-calc($1920)) {
+//         font-size: rem-calc($max-font);
+//     }
+// }
+
+// @mixin r-font-size($min-font, $max-font, $min-screen: 320px, $max-screen: 1920px) {
+//     $responsive-calc: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
+//     font-size: rem-calc($min-font);
+
+//     // Min width
+//     @include bp(min, rem-calc($min-screen)) {
+//         font-size: $responsive-calc;
+//     }
+
+//     // Halfway point
+//     @include bp(min, ((rem-calc($max-screen) + rem-calc($min-screen)) / 2)) {
+//         font-size: (rem-calc($max-font) + rem-calc($min-font)) / 2;
+//         font-size: $responsive-calc;
+//     }
+
+//     // Max width
+//     @include bp(min, rem-calc($max-screen)) {
+//         font-size: rem-calc($max-font);
+//     }
+// }
