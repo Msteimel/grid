@@ -15,13 +15,29 @@ $dk: 1101;
 
 $line-height: 1.6;
 // sets font-size range
-$em-base: 14;
-$em-base-max: 20;
+$em-base: 16;
+$em-base-max: 24;
+
+/*================================================
+				// These Work
+==================================================*/
 
 // min-vw and max-vw for fluid font size
-$min-width: ($ml/16)*1em;
-$max-width: ($dk/16)*1em;
+// $min_width: ($ml/16)*1em;
+// $max_width: ($dk/16)*1em;
 
-// min and max font size for fluid font
-$min-font: ($em-base/16)*1em;
-$max-font: ($em-base-max/16)*1em ;
+// // min and max font size for fluid font
+// $min_font: ($em-base/16)*1em;
+// $max_font: ($em-base-max/16)*1em ;
+
+/*================================================
+				// test
+==================================================*/
+
+// min-vw and max-vw for fluid font size
+$min_width: ($ml/16)*1em;
+$max_width: ($dk/16)*1em;
+
+// // min and max font size for fluid font
+$min_font-default: ($em-base/16)*1em;
+$max_font-default: ($em-base-max/16)*1em;
