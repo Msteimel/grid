@@ -10,7 +10,7 @@ $dk: 1101;
 
 
 /*================================================
-				// Typography varaibles
+				// Typography variables
 ==================================================*/
 
 $line-height: 1.6;
@@ -41,3 +41,9 @@ $max_width: ($dk/16)*1em;
 // // min and max font size for fluid font
 $min_font-default: ($em-base/16)*1em;
 $max_font-default: ($em-base-max/16)*1em;
+
+
+$min_width: ($ml/16)*1em;
+$max_width: ($dk/16)*1em;
+$min_font: ($em-base/16)*1em;
+$max_font: ($em-base-max/16)*1em;

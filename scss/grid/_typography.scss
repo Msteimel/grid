@@ -4,10 +4,8 @@ html, .root {
 }
 
 body {
+  // @include responsive-text($min_width, $max_width, $min_font, $max_font);
   font-family: sans-serif;
-  // This has to be here so you can set it per each element, but the minimum is what is set by the $em-base
-  // @include fluid-type($min_font-default, $max_font-default)
-  // font-size: 1rem;
   line-height: $line-height;
   margin: auto;
 }
@@ -49,7 +47,7 @@ h6, .h6 {
   margin-bottom: 0em;
 }
 p {
-    @include fluid-type(14px, 22px);
+    @include fluid-text( rel-unit(1em),  rel-unit(1.5em));
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;
