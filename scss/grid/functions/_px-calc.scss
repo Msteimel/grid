@@ -1,0 +1,14 @@
+
+// Calculate px from a rem/em value
+@function px-calc($rem, $base-val: 16) {
+    @if unit($rem) == px {
+        @return $rem;
+    }
+    @if not unitless($rem) {
+        $rem: strip-unit($rem);
+    }
+    @if not unitless($base-val) {
+        $base-val: strip-unit($base-val);
+    }
+    @return ($rem * $base-val) * 1px;
+}

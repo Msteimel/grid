@@ -4,13 +4,13 @@ html, .root {
 }
 
 body {
-  // @include responsive-text($min_width, $max_width, $min_font, $max_font);
+  @include responsive-text($min_width, $max_width, $min_font, $max_font);
   font-family: sans-serif;
   line-height: $line-height;
   margin: auto;
 }
 h1, .h1 {
-  font-size: 4.25em;
+  @include fluid-text (rel-unit(59px),  rel-unit(93px));
   line-height: 1.14705882em;
   margin-top: 0.38235294em;
   margin-bottom: 0.76470588em;
@@ -47,7 +47,8 @@ h6, .h6 {
   margin-bottom: 0em;
 }
 p {
-    @include fluid-text( rel-unit(1em),  rel-unit(1.5em));
+    @include fluid-text (rel-unit(($em-base)px),  rel-unit(($em-base-max)px));
+    // font-size: rel-unit(2em);
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

@@ -36,46 +36,6 @@
   }
 }
 
-/*================================================
-			Function
-==================================================*/
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-// Calculate px from a rem/em value
-@function px-calc($rem, $base-val: $em-base) {
-    @if unit($rem) == px {
-        @return $rem;
-    }
-    @if not unitless($rem) {
-        $rem: strip-unit($rem);
-    }
-    @if not unitless($base-val) {
-        $base-val: strip-unit($base-val);
-    }
-    @return ($rem * $base-val) * 1px;
-}
-
-// Calculate rems from a px value
-@function rem-calc($px, $base-val: $em-base) {
-    @if unit($px) == rem {
-        @return $px;
-    }
-    @if not unitless($px) {
-        $px: strip-unit($px);
-    }
-    @if not unitless($base-val) {
-        $base-val: strip-unit($base-val);
-    }
-    @return ($px / $base-val) * 1rem;
-}
-
-@function rel-unit($value, $base: $em-base) {
-    @return ($em-base/16)*$value;
-}
-
 
 /*================================================
 			Responsive Typography
@@ -84,13 +44,13 @@
 @mixin responsive-text($min-vw, $max-vw, $min-font-size, $max-font-size) {
   $responsive-calc: calc(#{px-calc($min-font-size)} + (#{strip-unit(px-calc($max-font-size))} - #{strip-unit(px-calc($min-font-size))}) * (100vw - #{px-calc($min-vw)}) / (#{strip-unit(px-calc($max-vw))} - #{strip-unit(px-calc($min-vw))}));
 
-  $u1: unit($min-vw);
-  $u2: unit($max-vw);
-  $u3: unit($min-font-size);
-  $u4: unit($max-font-size);
+  // $u1: unit($min-vw);
+  // $u2: unit($max-vw);
+  // $u3: unit($min-font-size);
+  // $u4: unit($max-font-size);
 
-  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-    & {
+  // @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  //   & {
       font-size: $min-font-size;
       @media screen and (min-width: $min-vw) {
         font-size:  $responsive-calc;
@@ -98,8 +58,8 @@
       @media screen and (min-width: $max-vw) {
         font-size: $max-font-size;
       }
-    }
-  }
+  //   }
+  // }
 }
 
 
@@ -108,7 +68,7 @@
 @mixin fluid-text($min-font-size, $max-font-size, $min-vw: $min_width, $max-vw: $max_width) {
 	$responsive-calc: calc(#{px-calc($min-font-size)} + (#{strip-unit(px-calc($max-font-size))} - #{strip-unit(px-calc($min-font-size))}) * (100vw - #{px-calc($min-vw)}) / (#{strip-unit(px-calc($max-vw))} - #{strip-unit(px-calc($min-vw))}));
 
-  font-size: rem-calc($min-font-size);
+  font-size: $min-font-size;
    // Min width
   @media screen and (min-width: $min-vw) {
     font-size: $responsive-calc;
