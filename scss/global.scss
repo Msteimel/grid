@@ -1,22 +1,8 @@
 
 
-/*================================================
-			Grid
-==================================================*/
-// functions, to make some things easier
-@import "grid/functions/rel-units";
-@import "grid/functions/rem-calc";
-@import "grid/functions/px-calc";
-@import "grid/functions/strip-unit";
-
-// The important bits, makes everything relative and work
 @import "grid/variables";
 @import "grid/mixins";
 
-// The structure
 @import "grid/grid";
 @import "grid/typography";
-
-
-// Site specific styles
 @import "example";
