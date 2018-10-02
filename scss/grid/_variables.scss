@@ -7,6 +7,7 @@ $ml: 667;
 $tp: 800;
 $tl: 1100;
 $dk: 1101;
+$lg: 1901;
 
 
 /*================================================
@@ -14,10 +15,10 @@ $dk: 1101;
 ==================================================*/
 
 $line-height: 1.6;
-$line-height-max: 1.8;
+// $line-height-max: 1.8;
 // sets font-size range
 $em-base: 16;
-$em-base-max: 24;
+$em-base-max: 22;
 
 /*================================================
 				// Fluid units
@@ -25,7 +26,7 @@ $em-base-max: 24;
 
 // min-vw and max-vw for fluid font size
 $min_width: ($ml/16)*1em;
-$max_width: ($dk/16)*1em;
+$max_width: ($lg/16)*1em;
 
 // // min and max font size for fluid font
 $min_font: ($em-base/16)*1em;

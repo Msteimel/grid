@@ -4,10 +4,10 @@ html, .root {
 }
 
 body {
-  // @include responsive-text($min_width, $max_width, $min_font, $max_font);
+  @include responsive-text($min_font, $max_font);
+
   font-family: sans-serif;
-  @include molten-leading($min_width, $max_width, $line-height, $line-height-max);
-  // line-height: calc(1.4em + (1.8 - 1.4) * ((100vw - 20em) / (80 - 20)));
+  line-height: $line-height;
   margin: auto;
 }
 h1, .h1 {
@@ -48,7 +48,7 @@ h6, .h6 {
   margin-bottom: 0em;
 }
 p {
-    @include fluid-text(fluid-unit(1rem), fluid-unit(1.5rem));
+    @include responsive-text(0.8rem, 2rem);
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

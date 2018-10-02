@@ -34,7 +34,6 @@
     @return ($px / $base-val) * 1rem;
 }
 
-
-@function fluid-unit($value, $base: $em-base) {
-    @return ($em-base/16)*$value;
+@function em($pxval, $base: $em-base) {
+  @return ($pxval / $base) * 1em;
 }
