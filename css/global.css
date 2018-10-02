@@ -5,22 +5,16 @@
 				// Typography variables
 ==================================================*/
 /*================================================
-				// These Work
-==================================================*/
-/*================================================
-				// test
-==================================================*/
-/*================================================
-			Breakpoints
+				// Fluid units
 ==================================================*/
 /*================================================
 			Function
 ==================================================*/
 /*================================================
-			Responsive Typography
+			Breakpoints
 ==================================================*/
 /*================================================
-				// Kyle's Mixin
+			Responsive Typography
 ==================================================*/
 .grid-12 {
   *zoom: 1;
@@ -113,8 +107,14 @@
 
 body {
   font-family: sans-serif;
-  line-height: 1.6;
+  line-height: 1.6em;
   margin: auto; }
+  @media screen and (min-width: 41.6875em) {
+    body {
+      line-height: calc(25.6px + (32 - 25.6) * (100vw - 667px) / (1101 - 667)); } }
+  @media screen and (min-width: 68.8125em) {
+    body {
+      line-height: 2; } }
 
 h1, .h1 {
   font-size: 4.25em;
@@ -154,13 +154,13 @@ h6, .h6 {
   margin-bottom: 0em; }
 
 p {
-  font-size: 0.0625rem; }
+  font-size: 1rem; }
   @media screen and (min-width: 41.6875em) {
     p {
       font-size: calc(16px + (24 - 16) * (100vw - 667px) / (1101 - 667)); } }
   @media screen and (min-width: 68.8125em) {
     p {
-      font-size: 1.5em; } }
+      font-size: 1.5rem; } }
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

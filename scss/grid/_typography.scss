@@ -6,7 +6,8 @@ html, .root {
 body {
   // @include responsive-text($min_width, $max_width, $min_font, $max_font);
   font-family: sans-serif;
-  line-height: $line-height;
+  @include molten-leading($min_width, $max_width, $line-height, $line-height-max);
+  // line-height: calc(1.4em + (1.8 - 1.4) * ((100vw - 20em) / (80 - 20)));
   margin: auto;
 }
 h1, .h1 {
@@ -47,7 +48,7 @@ h6, .h6 {
   margin-bottom: 0em;
 }
 p {
-    @include fluid-text( rel-unit(1em),  rel-unit(1.5em));
+    @include fluid-text(fluid-unit(1rem), fluid-unit(1.5rem));
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

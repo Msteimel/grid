@@ -36,46 +36,6 @@
   }
 }
 
-/*================================================
-			Function
-==================================================*/
-
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
-// Calculate px from a rem/em value
-@function px-calc($rem, $base-val: $em-base) {
-    @if unit($rem) == px {
-        @return $rem;
-    }
-    @if not unitless($rem) {
-        $rem: strip-unit($rem);
-    }
-    @if not unitless($base-val) {
-        $base-val: strip-unit($base-val);
-    }
-    @return ($rem * $base-val) * 1px;
-}
-
-// Calculate rems from a px value
-@function rem-calc($px, $base-val: $em-base) {
-    @if unit($px) == rem {
-        @return $px;
-    }
-    @if not unitless($px) {
-        $px: strip-unit($px);
-    }
-    @if not unitless($base-val) {
-        $base-val: strip-unit($base-val);
-    }
-    @return ($px / $base-val) * 1rem;
-}
-
-@function rel-unit($value, $base: $em-base) {
-    @return ($em-base/16)*$value;
-}
-
 
 /*================================================
 			Responsive Typography
@@ -102,6 +62,27 @@
   }
 }
 
+@mixin molten-leading($min-vw, $max-vw, $min-line-height, $max-line-height) {
+  $responsive-calc: calc(#{px-calc($min-line-height)} + (#{strip-unit(px-calc($max-line-height))} - #{strip-unit(px-calc($min-line-height))}) * (100vw - #{px-calc($min-vw)}) / (#{strip-unit(px-calc($max-vw))} - #{strip-unit(px-calc($min-vw))}));
+
+  // $u1: unit($min-vw);
+  // $u2: unit($max-vw);
+  // $u3: unit($min-line-height);
+  // $u4: unit($max-line-height);
+
+  // @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+  //   & {
+      line-height: $min-line-height;
+      @media screen and (min-width: $min-vw) {
+        line-height:  $responsive-calc;
+      }
+      @media screen and (min-width: $max-vw) {
+        line-height: $max-line-height;
+      }
+  //   }
+  // }
+}
+
 
 // Fluid Text ---- sets the range limit for responsive font-size. DON'T USE EM's. 
 // em units get blown up if responsive text mixin is set at body or root.
@@ -119,32 +100,3 @@
     font-size: $max-font-size;
   }
 }
-
-
-/*================================================
-				// Kyle's Mixin
-==================================================*/
-
-// Responsive Typography
-// "min-font-size-px" + ("max-font-size" - "min-font-size") * (100vw - "min-screen-size-px") / ("max-screen-size" - "min-screen-size")
-// @mixin r-font-size($min-font, $max-font, $min-screen: $min-width, $max-screen: $max-width) {
-//     $responsive-calc: calc(#{px-calc($min-font)} + (#{strip-units(px-calc($max-font))} - #{strip-units(px-calc($min-font))}) * (100vw - #{px-calc($min-screen)}) / (#{strip-units(px-calc($max-screen))} - #{strip-units(px-calc($min-screen))}));
-//     font-size: rem-calc($min-font);
-
-//     // Min width
-//     @include bp(min, rem-calc($min-screen)) {
-//         font-size: $responsive-calc;
-//     }
-
-//     // Halfway point
-//     @include bp(min, ((rem-calc($max-screen) + rem-calc($min-screen)) / 2)) {
-//         font-size: (rem-calc($max-font) + rem-calc($min-font)) / 2;
-//         font-size: $responsive-calc;
-//     }
-
-//     // Max width
-//     @include bp(min, rem-calc($max-screen)) {
-//         font-size: rem-calc($max-font);
-//     }
-// }
-
