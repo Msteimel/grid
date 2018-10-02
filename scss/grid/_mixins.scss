@@ -45,8 +45,9 @@
 ==================================================*/
 // Responsive Text ---- sets the range limit for responsive font-size.
 // Body: Allows any em based font size to be responsive
+// element: allows precise control if you use px or rem
 // em units get blown up if responsive text mixin is set at body or root.
-@mixin responsive-text($min-font-size, $max-font-size, $min-vw: $min_width, $max-vw: $max_width) {
+@mixin responsive-text($min-font-size, $max-font-size, $min-vw: $min-viewport, $max-vw: $max-viewport) {
 	$responsive-calc: calc(#{px-calc($min-font-size)} + (#{strip-unit(px-calc($max-font-size))} - #{strip-unit(px-calc($min-font-size))}) * (100vw - #{px-calc($min-vw)}) / (#{strip-unit(px-calc($max-vw))} - #{strip-unit(px-calc($min-vw))}));
 
   font-size: $min-font-size;

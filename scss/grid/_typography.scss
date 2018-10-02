@@ -4,7 +4,7 @@ html, .root {
 }
 
 body {
-  @include responsive-text($min_font, $max_font);
+  @include responsive-text($min-font, $max-font);
 
   font-family: sans-serif;
   line-height: $line-height;
@@ -45,10 +45,9 @@ h6, .h6 {
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
-  margin-bottom: 0em;
 }
 p {
-    @include responsive-text(0.8rem, 2rem);
+    @include responsive-text( em($em-base), em($em-base-max));
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

@@ -5,7 +5,7 @@
 				// Typography variables
 ==================================================*/
 /*================================================
-				// Fluid units
+				// Responsive units
 ==================================================*/
 /*================================================
 			Function
@@ -151,17 +151,16 @@ h6, .h6 {
   font-size: 1.125em;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
-  margin-bottom: 0em;
   margin-bottom: 0em; }
 
 p {
-  font-size: 0.8rem; }
+  font-size: 1em; }
   @media screen and (min-width: 41.6875em) {
     p {
-      font-size: calc(12.8px + (32 - 12.8) * (100vw - 667px) / (1901 - 667)); } }
+      font-size: calc(16px + (22 - 16) * (100vw - 667px) / (1901 - 667)); } }
   @media screen and (min-width: 118.8125em) {
     p {
-      font-size: 2rem; } }
+      font-size: 1.375em; } }
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

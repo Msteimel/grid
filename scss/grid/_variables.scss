@@ -9,25 +9,24 @@ $tl: 1100;
 $dk: 1101;
 $lg: 1901;
 
-
 /*================================================
 				// Typography variables
 ==================================================*/
 
 $line-height: 1.6;
-// $line-height-max: 1.8;
+
 // sets font-size range
 $em-base: 16;
 $em-base-max: 22;
 
 /*================================================
-				// Fluid units
+				// Responsive units
 ==================================================*/
 
 // min-vw and max-vw for fluid font size
-$min_width: ($ml/16)*1em;
-$max_width: ($lg/16)*1em;
+$min-viewport: ($ml / 16) * 1em;
+$max-viewport: ($lg / 16) * 1em;
 
 // // min and max font size for fluid font
-$min_font: ($em-base/16)*1em;
-$max_font: ($em-base-max/16)*1em;
+$min-font: ($em-base / 16) * 1em;
+$max-font: ($em-base-max / 16) * 1em;
