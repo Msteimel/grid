@@ -1,19 +1,20 @@
 
-// this is just notes, will need to be improved/fixed
+// Move this once you start making blocks
+.container {
+	padding: 2em 0;
+}
 
-	// total col width = 95px
-	// gutter width =11.25 (each side) *2 == 22.5px
-	// col width = 70px
+// Va
 
-
-$grid-12: 12;
+[class^="grid-"] {
+	margin: auto;
+	max-width: 1180px;
+	width: 96%;
+}
 
 .grid-12 {
 	@include clearfix;
 	box-sizing: border-box;
-	margin: auto;
-	max-width: 1180px;
-	width: 96%;
 	
 	@for $i from 1 through $grid-12 {
 
@@ -49,6 +50,17 @@ $grid-12: 12;
 	}
 }
 
-.container {
-	padding: 2em 0;
+.grid-css {
+	display: grid;
+	grid-template-columns: repeat($grid-css, 1fr);
+
+	@for $i from 1 through $grid-css {
+		@for $a from 1 through $grid-css {
+
+			.col-#{$a}-#{$i} {
+				grid-column-start: $a; 
+				grid-column-end: ($i + 1); 
+			}
+		}
+	}
 }

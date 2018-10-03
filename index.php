@@ -118,3 +118,30 @@
 		<div class="example-col">11</div>
 	</div>
 </div>
+
+<div class="grid-css example-grid container">
+	<div class="col-1-12">
+		<p><code>.grid-css</code> enter <code>.col-#-#</code> to span the columns you need. It's set to end at the column line. Two columns that start and end on the same line will push to the next row. </p>
+	</div>
+	<div class="col-1-3">
+		<div class="example-col">.col-1-3</div>
+	</div>
+	<div class="col-5-12">
+		<div class="example-col">.col-5-12</div>
+	</div>
+	<div class="col-1-3">
+		<div class="example-col">.col-1-3</div>
+	</div>
+	<div class="col-4-5">
+		<div class="example-col">.col-4-5</div>
+	</div>
+	<div class="col-6-12">
+		<div class="example-col">.col-6-12</div>
+	</div>
+	<div class="col-4-5">
+		<div class="example-col">.col-4-5</div>
+	</div>
+	<div class="col-5-8">
+		<div class="example-col">.col-5-8</div>
+	</div>
+</div>

@@ -9,6 +9,14 @@ $tl: 1100;
 $dk: 1101;
 $lg: 1901;
 
+
+/*================================================
+				// Grid column variables
+==================================================*/
+
+$grid-12: 12;
+$grid-css: 12;
+
 /*================================================
 				// Typography variables
 ==================================================*/
@@ -18,6 +26,7 @@ $line-height: 1.6;
 // sets font-size range
 $em-base: 16;
 $em-base-max: 22;
+
 
 /*================================================
 				// Responsive units
@@ -30,3 +39,5 @@ $max-viewport: ($lg / 16) * 1em;
 // // min and max font size for fluid font
 $min-font: ($em-base / 16) * 1em;
 $max-font: ($em-base-max / 16) * 1em;
+
+
