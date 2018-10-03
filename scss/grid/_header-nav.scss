@@ -1,0 +1,51 @@
+
+
+$menu-columns: 2;
+
+.header-nav {
+	
+}
+
+.navigation-main {
+	@include clearfix;
+	list-style: none;
+	padding: 0;
+}
+
+li[class*="nav-"]  {
+	float: left;
+	position: relative;
+	width: percentage(1/6);
+	
+	&:hover {
+		.nav-menu {
+			display: block;
+		}
+	}
+}
+
+.nav-menu {
+	@include clearfix;
+	display: none;
+	position: absolute;
+	width: em(350);
+	z-index: 100;
+	
+	& .nav-6 {
+		right: 0;
+	}
+}
+
+.nav-menu--col {
+	list-style: none;
+	padding: 0;
+	// float: left;
+	// width: 50%;
+	
+	@if $menu-columns{
+		float: left;
+		width: percentage(1/$menu-columns);
+	} @else {
+		width: 100%;
+	}
+}
