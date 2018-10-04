@@ -1,4 +1,7 @@
+
 <head>
+<!--[if IE 9 ]>   <html class="ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">

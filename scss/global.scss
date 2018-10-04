@@ -1,10 +1,16 @@
 
-
+// foundation
 @import "grid/variables";
 @import "grid/functions";
 @import "grid/mixins";
 
+// structure
 @import "grid/grid";
 @import "grid/typography";
 
+@import "grid/header-nav";
+@import "grid/table";
+@import "grid/form";
+
+// site styles
 @import "example";
