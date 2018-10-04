@@ -630,44 +630,6 @@ sup {
 sub {
   bottom: -0.25em; }
 
-.navigation-main {
-  *zoom: 1;
-  list-style: none;
-  padding: 0; }
-  .navigation-main:before, .navigation-main:after {
-    content: " ";
-    display: table; }
-  .navigation-main:after {
-    clear: both; }
-
-li[class*="nav-"] {
-  float: left;
-  position: relative;
-  width: 16.66667%; }
-  li[class*="nav-"]:hover .nav-menu {
-    display: block; }
-
-.nav-menu {
-  *zoom: 1;
-  display: none;
-  position: absolute;
-  width: 21.875em;
-  z-index: 100; }
-  .nav-menu:before, .nav-menu:after {
-    content: " ";
-    display: table; }
-  .nav-menu:after {
-    clear: both; }
-
-.nav-menu--col {
-  list-style: none;
-  padding: 0;
-  float: left;
-  width: 50%; }
-
-.nav-6 .nav-menu {
-  right: 0; }
-
 .example-grid .example-col {
   background-color: #ccc;
   border: 1px solid #aaa;

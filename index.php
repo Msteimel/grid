@@ -1,11 +1,5 @@
 
-<?php include 'includes/global/head/index.php';?>
-
-<div class="grid-12 container">
-	<div class="col-12">
-		<?php include 'includes/global/header/index.php';?>
-	</div>
-</div>
+<?php include 'includes/global/head.php';?>
 
 <div class="grid-12 example-grid container">
 	<div class="col-12">
