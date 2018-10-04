@@ -658,14 +658,15 @@ li[class*="nav-"] {
     display: table; }
   .nav-menu:after {
     clear: both; }
-  .nav-menu .nav-6 {
-    right: 0; }
 
 .nav-menu--col {
   list-style: none;
   padding: 0;
   float: left;
   width: 50%; }
+
+.nav-6 .nav-menu {
+  right: 0; }
 
 .example-grid .example-col {
   background-color: #ccc;
