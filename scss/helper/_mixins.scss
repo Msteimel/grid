@@ -65,11 +65,3 @@
   }
 }
 
-/*================================================
-			cssgrid
-==================================================*/
-@mixin row($row-start, $row-end) {
-	grid-row-start: $row-start;
-	grid-row-end: $row-end;
-}
-

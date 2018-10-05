@@ -1,18 +1,21 @@
 
-// foundation
-@import "grid/variables";
-@import "grid/functions";
-@import "grid/mixins";
+// helpers
+@import "helper/variables";
+@import "helper/functions";
+@import "helper/mixins";
+@import "helper/utility";
 
 // structure
-@import "grid/grid";
-@import "grid/typography";
-@import "grid/table";
-@import "grid/form";
+@import "structure/grid";
+@import "structure/typography";
+@import "structure/table";
+@import "structure/form";
 
-// parts
-@import "grid/header";
-@import "grid/buttons";
+// components
+@import "components/buttons";
+@import "components/header";
+@import "components/footer";
+@import "components/blocks";
 
 // site styles
 @import "example";
