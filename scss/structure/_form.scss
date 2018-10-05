@@ -1,0 +1,57 @@
+
+$place-holder-color: #ababab;
+$focus-text-color: #333;
+$focus-background-color: #efefef;
+$input-box-shadow: true;
+$input-box-shadow-value: 0 0 3px rgba(0,0,0,.2);
+
+label {
+	display: block;
+	font-size: 0.8em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+	background-color: transparent;
+    border: 1px solid #aaa;
+	box-sizing: border-box;
+	color: $place-holder-color;
+	line-height: $line-height;
+	padding: 0.5rem;
+	outline: none;
+	width: 100%;
+	@include appearance(none);
+	
+	select,
+	&::placeholder {
+		color: $place-holder-color;
+	}
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus,
+.text:focus,
+.textarea:focus {
+	border-color: #aaa;
+	color: $focus-text-color;
+	background-color: $focus-background-color;
+
+	@if $input-box-shadow{
+		box-shadow:  $input-box-shadow-value;
+	} 
+}
+
+select {
+}
+
+textarea {
+	min-height: em(150);
+}

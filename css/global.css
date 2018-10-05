@@ -23,10 +23,13 @@
 			Breakpoints
 ==================================================*/
 /*================================================
-			clearfix
+			Clearfix
 ==================================================*/
 /*================================================
 			Responsive Typography
+==================================================*/
+/*================================================
+			Misc
 ==================================================*/
 .container {
   padding: 2em 0; }
@@ -96,7 +99,8 @@
     *zoom: 1;
     box-sizing: border-box;
     float: left;
-    padding: 0 1.05263%; }
+    padding: 0 1.05263%;
+    margin-bottom: 0.5rem; }
     .grid-12 [class^=col-]:before, .grid-12 [class^=col-]:after {
       content: " ";
       display: table; }
@@ -109,7 +113,8 @@
     *zoom: 1;
     box-sizing: border-box;
     float: left;
-    padding: 0 1.05263%; }
+    padding: 0 1.05263%;
+    margin-bottom: 0.5rem; }
     .grid-12 [class^=offset-]:before, .grid-12 [class^=offset-]:after {
       content: " ";
       display: table; }
@@ -555,10 +560,12 @@
   .grid-css .col-12-12 {
     grid-column-start: 12;
     grid-column-end: 13; }
-  @media (max-width: 41.6875em) {
-    .grid-css [class^=col-] {
-      grid-column-start: 1;
-      grid-column-end: 13; } }
+  .grid-css [class^=col-] {
+    margin-bottom: 0.5rem; }
+    @media (max-width: 41.6875em) {
+      .grid-css [class^=col-] {
+        grid-column-start: 1;
+        grid-column-end: 13; } }
   .grid-css .row-1-1 {
     grid-row-start: 1;
     grid-row-end: 2; }
@@ -30753,6 +30760,58 @@ sub {
         content: "Updated";
         float: left; } }
 
+label {
+  display: block;
+  font-size: 0.8em; }
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  color: #ababab;
+  line-height: 1.6;
+  padding: 0.5rem;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  input[type="text"] select, input[type="text"]::placeholder,
+  input[type="password"] select,
+  input[type="password"]::placeholder,
+  input[type="email"] select,
+  input[type="email"]::placeholder,
+  input[type="tel"] select,
+  input[type="tel"]::placeholder,
+  input[type="number"] select,
+  input[type="number"]::placeholder,
+  textarea select,
+  textarea::placeholder,
+  select select,
+  select::placeholder {
+    color: #ababab; }
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus,
+.text:focus,
+.textarea:focus {
+  border-color: #aaa;
+  color: #333;
+  background-color: #efefef;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
+textarea {
+  min-height: 9.375em; }
+
 .header-nav {
   padding: 2em 0; }
 
@@ -30813,5 +30872,4 @@ li[class*="nav-"] {
   background-color: #ccc;
   border: 1px solid #aaa;
   padding: 1rem;
-  margin: 0.5rem 0;
   text-align: center; }

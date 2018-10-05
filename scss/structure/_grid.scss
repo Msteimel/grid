@@ -32,6 +32,7 @@
 		box-sizing: border-box;
 		float: left;
 		padding: 0 percentage(12/1140);
+		margin-bottom: 0.5rem;
 		
 		@include bp(ml) {
 			width: 100%;
@@ -43,6 +44,7 @@
 		box-sizing: border-box;
 		float: left;
 		padding: 0 percentage(12/1140);
+		margin-bottom: 0.5rem;
 		
 		@include bp(ml) {
 			margin-left: 0;
@@ -66,6 +68,7 @@
 	}
 
 	[class^=col-] {
+		margin-bottom: 0.5rem;
 		@include bp(ml) {
 			grid-column-start: 1;
 			grid-column-end: ($grid-css + 1);

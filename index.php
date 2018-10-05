@@ -44,15 +44,32 @@
 				<div class="col-12">
 					<textarea class="textarea"></textarea>
 				</div>
-					<input type="radio" name="gender" value="male"> Male
-					<input type="radio" name="gender" value="female"> Female
-					<input type="radio" name="gender" value="other"> Other  
+					<div class="col-1">
+						<label for="">Yes</label>
+						<input type="radio" name="radio" value="yes">
+					</div>
+					<div class="col-1">
+						<label for="">No</label>
+						<input type="radio" name="radio" value="no">
+					</div>
+					<div class="col-1">
+						<label for="">Other  </label>
+						<input type="radio" name="radio" value="other">
+					</div>
 					
-					<label class="switch">
-						<input type="checkbox">
-						<span class="slider"></span>
-					</label>
-					<input type="submit" value="Submit">
+					<div class="col-1">
+						<label class="switch">
+							<label for="">Toggle</label>
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</div>
+					<div class="col-4">
+						<input type="submit" class="button full-width" value="Input Submit" />
+					</div>
+					<div class="col-4">
+						<a href="#" class="button">Text button</a>
+					</div>
 			</form>
 		</div>
 
