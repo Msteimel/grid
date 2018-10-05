@@ -7,10 +7,12 @@
 // structure
 @import "grid/grid";
 @import "grid/typography";
-
-@import "grid/header-nav";
 @import "grid/table";
 @import "grid/form";
+
+// parts
+@import "grid/header";
+@import "grid/buttons";
 
 // site styles
 @import "example";

@@ -4,18 +4,6 @@ $grey: #f4f4f4;
 $primary-color: #883a3e;
 $break-large: 900px;
 
-body{
-  padding: 2em;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-p {
-  font-size: 1.25em;
-}
-
 .table {
   list-style: none;
   padding: 0;
@@ -58,7 +46,7 @@ p {
   }
 }
 
-.title, .col-3, .col-4, .col-5 {
+.title, .table-col--3, .table-col--4, .table-col--5 {
   @media screen and (max-width: $break-large) {
       border-bottom: 1px solid black;
       padding: 1em 0.5em;
@@ -81,7 +69,7 @@ p {
   }
 }
 
-.col-2 {
+.table-col--2 {
   width: 40%;
 
   @media screen and (max-width: $break-large) {
@@ -102,7 +90,7 @@ p {
   }
 }
 
-.col-3 {
+.table-col--3 {
   margin: auto;
   text-align: center;
   width: 15%;
@@ -116,7 +104,7 @@ p {
     }
   }
 
-  .sub-col{
+  .sub-table-col{
     display: inline-block;
     padding: 0;
 
@@ -131,7 +119,7 @@ p {
   }
 }
 
-.col-4 {
+.table-col--4 {
   text-align: center;
   width: 15%;
 
@@ -145,7 +133,7 @@ p {
    }
 }
 
-.col-5 {
+.table-col--5 {
   text-align: center;
   width: 15%;
 

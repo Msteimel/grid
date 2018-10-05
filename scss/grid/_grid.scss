@@ -27,7 +27,7 @@
 		}
 	}
 
-	[class*=col-] {
+	[class^=col-] {
 		@include clearfix;
 		box-sizing: border-box;
 		float: left;
@@ -38,7 +38,7 @@
 		}
 	}
 
-	[class*=offset-] {
+	[class^=offset-] {
 		@include clearfix;
 		box-sizing: border-box;
 		float: left;
@@ -52,15 +52,33 @@
 
 .grid-css {
 	display: grid;
+	grid-auto-columns: 1fr;
 	grid-template-columns: repeat($grid-css, 1fr);
 
-	@for $i from 1 through $grid-css {
-		@for $a from 1 through $grid-css {
+	@for $col-start from 1 through $grid-css {
+		@for $col-end from 1 through $grid-css {
 
-			.col-#{$a}-#{$i} {
-				grid-column-start: $a; 
-				grid-column-end: ($i + 1); 
+			.col-#{$col-start}-#{$col-end} {
+				grid-column-start: $col-start; 
+				grid-column-end: ($col-end + 1); 
 			}
 		}
 	}
+
+	[class^=col-] {
+		@include bp(ml) {
+			grid-column-start: 1;
+			grid-column-end: ($grid-css + 1);
+		}
+	}
+
+	@for $row-start from 1 through $grid-css-row {
+		@for $row-end from 1 through $grid-css-row {
+
+			.row-#{$row-start}-#{$row-end} {
+				grid-row-start: $row-start; 
+				grid-row-end: ($row-end + 1); 
+			}
+		}
+	}	
 }

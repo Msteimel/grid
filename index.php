@@ -63,40 +63,40 @@
 				<ul class="table">
 					<li class="table-head">
 						<span class="title">Title</span>
-						<span class="col-2">Description</span>
-						<span class="col-3">Language</span>
-						<span class="col-4">Category</span>
-						<span class="col-5">Updated</span>
+						<span class="table-col--2">Description</span>
+						<span class="table-col--3">Language</span>
+						<span class="table-col--4">Category</span>
+						<span class="table-col--5">Updated</span>
 					</li>
-			    <li>
+			    	<li>
 						<span class="title">Title 1</span>
-						<span class="col-2">Magna dolor cupidatat proident cupidatat sint veniam cillum anim adipisicing deserunt nisi voluptate commodo ea id ad voluptate.</span>
-						<div class="col-3">
-							<span class="sub-col"><a href="#">ENG</a></span>
-							<span class="sub-col"><a href="#">ESP</a></span>
+						<span class="table-col--2">Magna dolor cupidatat proident cupidatat sint veniam cillum anim adipisicing deserunt nisi voluptate commodo ea id ad voluptate.</span>
+						<div class="table-col--3">
+							<span class="sub-table-col"><a href="#">ENG</a></span>
+							<span class="sub-table-col"><a href="#">ESP</a></span>
 						</div>
-						<span class="col-4">Other</span>
-						<span class="col-5">6-17-18</span>
+						<span class="table-col--4">Other</span>
+						<span class="table-col--5">6-17-18</span>
 					</li>
-				  <li>
+				  	<li>
 						<span class="title">Title 2</span>
-						<span class="col-2">Magna dolor cupidatat proident cupidatat sint veniam cillum anim adipisicing deserunt nisi voluptate commodo ea id ad voluptate.</span>
-						<div class="col-3">
-							<span class="sub-col"><a href="#">ENG</a></span>
-							<span class="sub-col"><a href="#">ESP</a></span>
+						<span class="table-col--2">Magna dolor cupidatat proident cupidatat sint veniam cillum anim adipisicing deserunt nisi voluptate commodo ea id ad voluptate.</span>
+						<div class="table-col--3">
+							<span class="sub-table-col"><a href="#">ENG</a></span>
+							<span class="sub-table-col"><a href="#">ESP</a></span>
 						</div>
-						<span class="col-4">Other</span>
-						<span class="col-5">6-17-18</span>
+						<span class="table-col--4">Other</span>
+						<span class="table-col--5">6-17-18</span>
 					</li>
-				  <li>
+				  	<li>
 						<span class="title">Title 3</span>
-						<span class="col-2">Magna dolor cupidatat proident cupidatat sint veniam cillum anim adipisicing deserunt nisi voluptate commodo ea id ad voluptate.</span>
-						<div class="col-3">
-							<span class="sub-col"><a href="#">ENG</a></span>
-							<span class="sub-col"><a href="#">ESP</a></span>
+						<span class="table-col--2">Magna dolor cupidatat proident cupidatat sint veniam cillum anim adipisicing deserunt nisi voluptate commodo ea id ad voluptate.</span>
+						<div class="table-col--3">
+							<span class="sub-table-col"><a href="#">ENG</a></span>
+							<span class="sub-table-col"><a href="#">ESP</a></span>
 						</div>
-						<span class="col-4">Other</span>
-						<span class="col-5">6-17-18</span>
+						<span class="table-col--4">Other</span>
+						<span class="table-col--5">6-17-18</span>
 					</li>
 				</ul>	
 			</section>
@@ -209,30 +209,33 @@
 		</div>
 	</div>
 
-	<div class="grid-css example-grid container">
-		<div class="col-1-12">
-			<p><code>.grid-css</code> enter <code>.col-#-#</code> to span the columns you need. It's set to end at the column line. Two columns that start and end on the same line will push to the next row. </p>
+	<div class="container">
+		<div class="grid-css example-grid">
+			<div class="col-1-12">
+				<p><code>.grid-css</code> enter <code>.col-#-#</code> to span the columns you need. It's set to end at the column line. Two columns that start and end on the same line will push to the next row. </p>
+				<p>You can enter <code>.row-#-#</code> to position items specifically. Doing this you have to position everything specifically. Things tend to float or jump over other eleents if you don't</p>
+			</div>
 		</div>
-		<div class="col-1-3">
-			<div class="example-col">.col-1-3</div>
-		</div>
-		<div class="col-5-12">
-			<div class="example-col">.col-5-12</div>
-		</div>
-		<div class="col-1-3">
-			<div class="example-col">.col-1-3</div>
-		</div>
-		<div class="col-4-5">
-			<div class="example-col">.col-4-5</div>
-		</div>
-		<div class="col-6-12">
-			<div class="example-col">.col-6-12</div>
-		</div>
-		<div class="col-4-5">
-			<div class="example-col">.col-4-5</div>
-		</div>
-		<div class="col-5-8">
-			<div class="example-col">.col-5-8</div>
+		<div class="grid-css example-grid">
+			<div class="col-1-12">
+				<?php include 'includes/global/header/index.php';?>
+			</div>
+			<div class="col-1-8">
+				<!-- <div class="example-col">Body</div> -->
+				<p>Aute fugiat pariatur qui amet labore incididunt do fugiat occaecat minim dolor in amet id qui est excepteur cupidatat qui in nulla laborum minim excepteur ex sed aute nulla excepteur ad pariatur irure est culpa sed labore aliquip laborum aute exercitation ad ut mollit magna dolore duis veniam dolore anim ut id voluptate officia proident duis esse consectetur in officia dolore in ea anim eu incididunt fugiat ea amet dolore ad est ut cupidatat nostrud incididunt commodo in dolore eu veniam non fugiat in deserunt dolor voluptate exercitation enim anim ut adipisicing ad reprehenderit non exercitation dolor amet excepteur duis exercitation ea pariatur consequat ad est in duis laborum sit ut ullamco pariatur nulla nulla enim elit nisi anim in ut veniam ut esse fugiat consequat velit fugiat cupidatat dolore laborum dolore ullamco adipisicing officia deserunt ea nulla adipisicing in ut fugiat incididunt pariatur ea do anim sint consequat velit consectetur velit labore exercitation cillum laborum ex aliqua aliquip elit dolore labore in amet ex cillum excepteur eiusmod fugiat ad in excepteur aute est qui id dolor eu tempor dolore exercitation aute eiusmod pariatur ut dolore sint in fugiat dolore laboris qui minim dolore id ea ut laborum laboris tempor elit nostrud reprehenderit in est minim aute dolore anim tempor in quis commodo aute cupidatat incididunt eu enim in eu dolor elit dolore do eiusmod tempor pariatur qui esse exercitation reprehenderit.</p>
+				<p>Deserunt exercitation et do ut nulla occaecat amet velit magna dolor labore sit pariatur et tempor ex laborum esse do reprehenderit est fugiat ullamco ut tempor culpa ut aute.</p>
+				<p>Adipisicing aliqua voluptate ad mollit ut minim do ea dolor ut anim tempor dolor eiusmod pariatur in eiusmod dolor veniam veniam minim.</p>
+				<p>Ullamco id et cillum irure mollit dolor voluptate pariatur aute exercitation minim commodo magna incididunt adipisicing aliqua voluptate ut ex anim in et sunt aliquip cillum id elit in ullamco id ex est sed adipisicing ad fugiat sint adipisicing.</p>
+			</div>
+			<div class="col-9-12">
+				<p>Ullamco id et cillum irure mollit dolor voluptate pariatur aute exercitation minim commodo magna incididunt adipisicing aliqua voluptate ut ex anim in et sunt aliquip cillum id elit in ullamco id ex est sed adipisicing ad fugiat sint adipisicing.</p>
+			</div>
+			<div class="col-2-11">
+				<div class="example-col">Content Section</div>
+			</div>
+			<div class="col-1-12">
+				<div class="example-col">Footer</div>
+			</div>
 		</div>
 	</div>
 
