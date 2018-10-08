@@ -44,32 +44,34 @@
 				<div class="col-12">
 					<textarea class="textarea"></textarea>
 				</div>
-					<div class="col-1">
-						<label for="">Yes</label>
-						<input type="radio" name="radio" value="yes">
-					</div>
-					<div class="col-1">
-						<label for="">No</label>
-						<input type="radio" name="radio" value="no">
-					</div>
-					<div class="col-1">
-						<label for="">Other  </label>
-						<input type="radio" name="radio" value="other">
-					</div>
-					
-					<div class="col-1">
-						<label class="switch">
+				<div class="col-12">
+					<fieldset >
+					    <legend>Fieldset</legend>
+						<div class="col-2">
+						    <input id="radio-1" name="radio" type="radio" checked>
+						    <label for="radio-1" class="radio-label">Checked</label>
+					  	</div>
+						<div class="col-2">
+						    <input id="radio-2" name="radio" type="radio">
+						    <label  for="radio-2" class="radio-label">Unchecked</label>
+						</div>
+						<div class="col-2">
+						    <input id="radio-3" name="radio" type="radio" disabled>
+							<label for="radio-3" class="radio-label">Disabled</label>
+						</div>
+
+						<div class="col-1">
+							<input type="checkbox" name="checkbox">
 							<label for="">Toggle</label>
-							<input type="checkbox">
-							<span class="slider"></span>
-						</label>
-					</div>
-					<div class="col-4">
-						<input type="submit" class="button full-width" value="Input Submit" />
-					</div>
-					<div class="col-4">
-						<a href="#" class="button">Text button</a>
-					</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="col-4">
+					<input type="submit" class="button full-width" value="Input Submit" />
+				</div>
+				<div class="col-4">
+					<a href="#" class="button">Text</a>
+				</div>
 			</form>
 		</div>
 

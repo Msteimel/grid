@@ -68,7 +68,10 @@
 	}
 
 	[class^=col-] {
+		box-sizing: border-box;
 		margin-bottom: 0.5rem;
+		padding: 0 percentage(12/1140);
+		
 		@include bp(ml) {
 			grid-column-start: 1;
 			grid-column-end: ($grid-css + 1);

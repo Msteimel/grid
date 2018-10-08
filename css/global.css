@@ -561,7 +561,9 @@
     grid-column-start: 12;
     grid-column-end: 13; }
   .grid-css [class^=col-] {
-    margin-bottom: 0.5rem; }
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+    padding: 0 1.05263%; }
     @media (max-width: 41.6875em) {
       .grid-css [class^=col-] {
         grid-column-start: 1;
@@ -30760,6 +30762,28 @@ sub {
         content: "Updated";
         float: left; } }
 
+form {
+  *zoom: 1;
+  margin-bottom: 0; }
+  form:before, form:after {
+    content: " ";
+    display: table; }
+  form:after {
+    clear: both; }
+
+fieldset {
+  *zoom: 1;
+  border: 1px solid #aaa;
+  padding: 0;
+  margin: 0 0 1.25em; }
+  fieldset:before, fieldset:after {
+    content: " ";
+    display: table; }
+  fieldset:after {
+    clear: both; }
+  fieldset legend {
+    margin: 0 0 0 1em; }
+
 label {
   display: block;
   font-size: 0.8em; }
@@ -30771,17 +30795,18 @@ input[type="tel"],
 input[type="number"],
 textarea,
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: transparent;
   border: 1px solid #aaa;
   box-sizing: border-box;
+  font-size: 0.8em;
   color: #ababab;
   line-height: 1.6;
   padding: 0.5rem;
   outline: none;
-  width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+  width: 100%; }
   input[type="text"] select, input[type="text"]::placeholder,
   input[type="password"] select,
   input[type="password"]::placeholder,
@@ -30808,6 +30833,41 @@ select:focus,
   color: #333;
   background-color: #efefef;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
+input[type="radio"] {
+  margin: 0.5rem;
+  position: absolute;
+  opacity: 0; }
+  input[type="radio"] + .radio-label:before {
+    content: '';
+    background: #efefef;
+    border-radius: 100%;
+    border: 1px solid #afafaf;
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    position: relative;
+    top: 0.1em;
+    margin-right: 0.6em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 250ms ease; }
+  input[type="radio"]:checked + .radio-label:before {
+    background-color: #3197EE;
+    box-shadow: inset 0 0 0 4px #efefef; }
+  input[type="radio"]:focus + .radio-label:before {
+    outline: none;
+    border-color: #3197EE; }
+  input[type="radio"]:disabled + .radio-label:before {
+    box-shadow: inset 0 0 0 4px #efefef;
+    border-color: #afafaf;
+    background: #afafaf; }
+  input[type="radio"] + .radio-label:empty:before {
+    margin-right: 0; }
+
+select {
+  border-radius: 0; }
 
 textarea {
   min-height: 9.375em; }

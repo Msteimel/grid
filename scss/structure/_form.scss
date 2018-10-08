@@ -4,6 +4,25 @@ $focus-text-color: #333;
 $focus-background-color: #efefef;
 $input-box-shadow: true;
 $input-box-shadow-value: 0 0 3px rgba(0,0,0,.2);
+$border-color: #aaa; 
+$form-spacing: 0;
+$fieldset-spacing: 1.25em;
+
+form {
+	@include clearfix;
+	margin-bottom: $form-spacing;
+}
+
+fieldset {
+	@include clearfix;
+	border: 1px solid $border-color;
+	padding: 0;
+	margin:0 0 $fieldset-spacing;
+	
+	legend {
+		margin: 0 0 0 1em;
+	}
+}
 
 label {
 	display: block;
@@ -17,15 +36,16 @@ input[type="tel"],
 input[type="number"],
 textarea,
 select {
+	@include appearance(none);
 	background-color: transparent;
-    border: 1px solid #aaa;
+    border: 1px solid $border-color;
 	box-sizing: border-box;
+	font-size: 0.8em;
 	color: $place-holder-color;
 	line-height: $line-height;
 	padding: 0.5rem;
 	outline: none;
 	width: 100%;
-	@include appearance(none);
 	
 	select,
 	&::placeholder {
@@ -40,7 +60,7 @@ textarea:focus,
 select:focus,
 .text:focus,
 .textarea:focus {
-	border-color: #aaa;
+	border-color: $border-color;
 	color: $focus-text-color;
 	background-color: $focus-background-color;
 
@@ -49,7 +69,76 @@ select:focus,
 	} 
 }
 
+$color2: #3197EE;
+
+input[type="radio"] {
+  	margin: 0.5rem;
+	position: absolute;
+	opacity: 0;
+	+ .radio-label {
+	  &:before {
+	    content: '';
+	    background: $focus-background-color;
+	    border-radius: 100%;
+	    border: 1px solid darken($focus-background-color, 25%);
+	    display: inline-block;
+	    width: 1.2em;
+	    height: 1.2em;
+	    position: relative;
+	    top: 0.1em;
+	    margin-right: 0.6em;
+	    vertical-align: top;
+	    cursor: pointer;
+	    text-align: center;
+	    transition: background-color 250ms ease;
+	  }
+	}
+	&:checked {
+	  + .radio-label {
+	    &:before {
+	      background-color: $color2;
+	      box-shadow: inset 0 0 0 4px $focus-background-color;
+	    }
+	  }
+	}
+	&:focus {
+	  + .radio-label {
+	    &:before {
+	      outline: none;
+	      border-color: $color2;
+	    }
+	  }
+	}
+	&:disabled {
+	  + .radio-label {
+	    &:before {
+	      box-shadow: inset 0 0 0 4px $focus-background-color;
+	      border-color: darken($focus-background-color, 25%);
+	      background: darken($focus-background-color, 25%);
+	    }
+	  }
+	}
+	+ .radio-label {
+	  &:empty {
+	    &:before {
+	      margin-right: 0;
+	    }
+	  }
+	}
+}
+
+input[type="checkbox"] {
+	// opacity: 0;
+	&::before {
+		
+	}
+	&:checked {
+		
+	}
+}
+
 select {
+    border-radius: 0;
 }
 
 textarea {

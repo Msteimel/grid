@@ -5,6 +5,9 @@
 ==================================================*/
 
 @mixin bp($screen-width) {
+	@if $screen-width == sm {
+		@media (max-width: ($sm/16)*1em) { @content ; }
+	}
 	@if $screen-width == mp {
 		@media (max-width: ($mp/16)*1em) { @content ; }
 	} 
