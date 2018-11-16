@@ -11,43 +11,43 @@ body {
   margin: auto;
 }
 h1, .h1 {
-  font-size: 4.25em;
+  @include responsive-text(45px, 64px);
   line-height: 1.14705882em;
   margin-top: 0.38235294em;
   margin-bottom: 0.76470588em;
 }
 h2, .h2 {
-  font-size: 2.625em;
+  @include responsive-text(28px, 48px);
   line-height: 1.46808511em;
   margin-top: 0.4893617em;
   margin-bottom: 0.4893617em;
 }
 h3, .h3 {
-  font-size: 1.625em;
+  @include responsive-text(24px, 32px);
   line-height: 1.5862069em;
   margin-top: 0.79310345em;
   margin-bottom: 0em;
 }
 h4, .h4 {
-  font-size: 1.312em;
+  @include responsive-text(18px, 24px);
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 h5, .h5 {
-  font-size: 1.25em;
+ @include responsive-text(16px, 20px);
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 h6, .h6 {
-  font-size: 1.125em;
+  @include responsive-text(16px, 18px);
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 p {
-    @include responsive-text( em($em-base), em($em-base-max));
+    @include responsive-text( 14px, 20px);
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

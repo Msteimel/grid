@@ -1,17 +1,26 @@
 
 /*================================================
-				// Site Styles
-==================================================*/
-$pirmary-color: #fff;
-$secondary-color: #333;
-$link-color: #a1a1a1;
-
-
-/*================================================
 				// Color Variables
 ==================================================*/
+// Constant
 $black: #222;
 $white: #fff;
+
+// site colors
+$lightest-blue: #EDF9FC;
+$light-blue: #D1F4FA;
+$dark-blue: #53CDE2;
+$darkest-blue:#005792;
+
+/*================================================
+				// Site Styles
+==================================================*/
+$pirmary-color: $darkest-blue;
+$secondary-color: $dark-blue;
+$link-color: $secondary-color;
+
+$nav-link:$white;
+
 
 /*================================================
 					Breakpoints
@@ -41,7 +50,7 @@ $line-height: 1.6;
 
 // sets font-size range
 $em-base: 16;
-$em-base-max: 22;
+$em-base-max: 20;
 
 
 /*================================================
@@ -50,7 +59,7 @@ $em-base-max: 22;
 
 // min-vw and max-vw for fluid font size
 $min-viewport: ($ml / 16) * 1em;
-$max-viewport: ($lg / 16) * 1em;
+$max-viewport: ($dk / 16) * 1em;
 
 // // min and max font size for fluid font
 $min-font: ($em-base / 16) * 1em;

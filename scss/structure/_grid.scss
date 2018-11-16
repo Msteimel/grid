@@ -1,18 +1,13 @@
 
-// Move this once you start making blocks
-.container {
-	padding: 2em 0;
-}
-
 // Va
 
-[class^="grid-"] {
+[class*="grid"] {
 	margin: auto;
 	max-width: 1180px;
 	width: 96%;
 }
 
-.grid-12 {
+.grid {
 	@include clearfix;
 	box-sizing: border-box;
 	
@@ -27,7 +22,7 @@
 		}
 	}
 
-	[class^=col-] {
+	[class*=col-] {
 		@include clearfix;
 		box-sizing: border-box;
 		float: left;
@@ -37,9 +32,14 @@
 		@include bp(ml) {
 			width: 100%;
 		}
+		
+		[class*=col-] { 
+			padding: 0;
+		 }
+
 	}
 
-	[class^=offset-] {
+	[class*=offset] {
 		@include clearfix;
 		box-sizing: border-box;
 		float: left;
