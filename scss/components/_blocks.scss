@@ -1,10 +1,14 @@
 
 .container {
 	@include clearfix;
-	padding: 2em 0; 
+	padding-top: em($spacing-container);
 }
 
 .block {
 	@include clearfix;
-	padding-top: em(32);
+	padding-top: em($spacing-block);
+}
+
+.bit {
+	padding-top: em($spacing-bit);
 }

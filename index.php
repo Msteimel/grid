@@ -20,13 +20,13 @@
 		<div class="hero--overlay"></div>	
 	</section>
 
-	<section class="container grid">
-		<div class="col-12">
+	<article class="container grid">
+		<div class="col-10 offset-1">
 			<!-- <div class="col-12"> -->
 				<h1>Type Style</h1>
 				<p>The text is fully responsive by using ems on a per element basis or using an include that allows you set the min and max font size. </p>
 			<!-- </div> -->
-			<div class="block">
+			<section class="block">
 				<div class="col-6">
 					<div class="block-title">Headings</div>
 					<h1>Heading 1</h1>
@@ -53,8 +53,8 @@
 					</div>
 					<code>.code { padding: 0.5em; }</code>
 				</div>
-			</div>
-			<div class="col-12">
+			</section>
+			<section class="block">
 				<div class="col-4">
 					<ul>
 						<li>Dolore non nisi quis sit.</li>
@@ -76,8 +76,50 @@
 						<li>Mollit ea ut aliquip amet.</li>
 					</ul>
 				</div>
-			</div>
+			</section>
+			<section class="block">
+				<ul class="inline-list">
+					<li>Et velit in.</li>
+					<li>Lorem ipsum culpa eiusmod minim.</li>
+					<li>Lorem ipsum sit excepteur.</li>
+					<li>Pariatur eu.</li>
+					<li>Occaecat ex reprehenderit.</li>
+				</ul>
+			</section>
+			<section>
+				<div class="block-title">Block Quote</div>
+				<blockquote>
+					Reprehenderit consequat consectetur consequat laborum reprehenderit officia cillum et laboris sunt culpa duis esse velit sit consectetur est cillum mollit ut consequat qui.
+					<cite>Billy</cite>
+				</blockquote>
+				<blockquote class="quote">Ullamco sit in commodo deserunt commodo in dolor consequat sunt dolore duis sit cupidatat est laboris mollit nulla excepteur.</blockquote>
+			</section>
 		</div>
+	</article>
+
+	<article class="container grid">
+		<div class="col-10 offset-1">
+			<h1>Grid</h1>
+			<p class="lead">There are two grids, one in the more traditional vien using floats and a sass function based on the number of columns desired. The second grid is done in css-grid to all for more flexible and precise control.</p>
+		</div>
+	</article>
+	<section class="grid">
+			<div class="col-10 offset-1">
+				<section class="block">Traditional Grid <code>.grid</code></section>
+				<p>This tradition grid is set to a 12 column layout by default. Using `.col-#` to define the width of the column and using `.offset-#` to push the columnd form the right. it first needs to be wrapped in `.grid`</p>
+			</div>
+		<span><div class="col-11">11</div><div class="col-1">1</div></span>
+		<span><div class="col-10">10</div><div class="col-2">2</div></span>
+		<span><div class="col-9">9</div><div class="col-3">3</div></span>
+		<span><div class="col-8">8</div><div class="col-4">4</div></span>
+		<span><div class="col-7">7</div><div class="col-5">5</div></span>
+		<span><div class="col-6">6</div><div class="col-6">6</div></span>
+		<span><div class="col-5">5</div><div class="col-7">7</div></span>
+		<span><div class="col-4">4</div><div class="col-8">8</div></span>
+		<span><div class="col-3">3</div><div class="col-9">9</div></span>
+		<span><div class="col-2">2</div><div class="col-10">10</div></span>
+		<span><div class="col-1">1</div><div class="col-11">11</div></span>
+		<div class="col-12">12</div>
 	</section>
 		
 

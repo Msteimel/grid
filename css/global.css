@@ -14,6 +14,9 @@
 				// Typography variables
 ==================================================*/
 /*================================================
+	// Component Spacing
+==================================================*/
+/*================================================
 				// Responsive units
 ==================================================*/
 /*================================================
@@ -30964,7 +30967,7 @@ li[class*="nav-"] {
 
 .container {
   *zoom: 1;
-  padding: 2em 0; }
+  padding-top: 2em; }
   .container:before, .container:after {
     content: " ";
     display: table; }
@@ -30973,12 +30976,15 @@ li[class*="nav-"] {
 
 .block {
   *zoom: 1;
-  padding-top: 2em; }
+  padding-top: 1.5em; }
   .block:before, .block:after {
     content: " ";
     display: table; }
   .block:after {
     clear: both; }
+
+.bit {
+  padding-top: 1em; }
 
 .hero {
   background: #53e2bc;
