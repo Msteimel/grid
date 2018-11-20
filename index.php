@@ -22,10 +22,8 @@
 
 	<article class="container grid">
 		<div class="col-10 offset-1">
-			<!-- <div class="col-12"> -->
 				<h1>Type Style</h1>
 				<p>The text is fully responsive by using ems on a per element basis or using an include that allows you set the min and max font size. </p>
-			<!-- </div> -->
 			<section class="block">
 				<div class="col-6">
 					<div class="block-title">Headings</div>
@@ -104,24 +102,106 @@
 		</div>
 	</article>
 	<section class="grid">
-			<div class="col-10 offset-1">
-				<section class="block">Traditional Grid <code>.grid</code></section>
-				<p>This tradition grid is set to a 12 column layout by default. Using `.col-#` to define the width of the column and using `.offset-#` to push the columnd form the right. it first needs to be wrapped in `.grid`</p>
-			</div>
-		<span><div class="col-11">11</div><div class="col-1">1</div></span>
-		<span><div class="col-10">10</div><div class="col-2">2</div></span>
-		<span><div class="col-9">9</div><div class="col-3">3</div></span>
-		<span><div class="col-8">8</div><div class="col-4">4</div></span>
-		<span><div class="col-7">7</div><div class="col-5">5</div></span>
-		<span><div class="col-6">6</div><div class="col-6">6</div></span>
-		<span><div class="col-5">5</div><div class="col-7">7</div></span>
-		<span><div class="col-4">4</div><div class="col-8">8</div></span>
-		<span><div class="col-3">3</div><div class="col-9">9</div></span>
-		<span><div class="col-2">2</div><div class="col-10">10</div></span>
-		<span><div class="col-1">1</div><div class="col-11">11</div></span>
+		<div class="col-10 offset-1">
+			<section class="block">Traditional Grid <code>.grid</code></section>
+			<p>This tradition grid is set to a 12 column layout by default. Using `.col-#` to define the width of the column and using `.offset-#` to push the columnd form the right. it first needs to be wrapped in `.grid`</p>
+		</div>
+		<div class="col-11">11</div><div class="col-1">col-1</div>
+		<div class="col-10">10</div><div class="col-2">col-2</div>
+		<div class="col-9">9</div><div class="col-3">col-3</div>
+		<div class="col-8">8</div><div class="col-4">col-4</div>
+		<div class="col-7">7</div><div class="col-5">col-5</div>
+		<div class="col-6">6</div><div class="col-6">col-6</div>
+		<div class="col-5">5</div><div class="col-7">col-7</div>
+		<div class="col-4">4</div><div class="col-8">col-8</div>
+		<div class="col-3">3</div><div class="col-9">col-9</div>
+		<div class="col-2">2</div><div class="col-10">col-10</div>
+		<div class="col-1">1</div><div class="col-11">col-11</div>
 		<div class="col-12">12</div>
 	</section>
+	<section class="grid">
+		<div class="col-10 offset-1">
+			<section class="block">Traditional Grid &ndash; Offest <code>.grid</code></section>
+			<p>This tradition grid is set to a 12 column layout by default. Using `.col-#` to define the width of the column and using `.offset-#` to push the columnd form the right. it first needs to be wrapped in `.grid`</p>
+		</div>
+		<div class="col-12">No offset</div>
+		<div class="offset-1 col-11">Offset-1</div>
+		<div class="offset-2 col-10">Offset-2</div>
+		<div class="offset-3 col-9">Offset-3</div>
+		<div class="offset-4 col-8">Offset-4</div>
+		<div class="offset-5 col-7">Offset-5</div>
+		<div class="offset-6 col-6">Offset-6</div>
+		<div class="offset-7 col-5">Offset-7</div>
+		<div class="offset-8 col-4">Offset-8</div>
+		<div class="offset-9 col-3">Offset-9</div>
+		<div class="offset-10 col-2">Offset-10</div>
+		<div class="offset-11 col-1">OS-11</div>
+	</section>
+
+	<section class="grid-css">
+		<div class="col-2-11">
+			<section class="block">Css Grid <code>.grid-css</code></section>
+			<p>`.grid-css` allows you to specifically place a column using `.col-#-#` for the start and end line of the column.  You can also use `.row-#-#` to set the height of an element, however it seems to work best to use it for all elements, or not at all.</p>
+		</div>
+		<div class="col-1-12">col-1-12</div>
+		<div class="col-2-12">col-2-12</div>
+		<div class="col-3-12">col-3-12</div>
+		<div class="col-4-12">col-4-12</div>
+		<div class="col-5-12">col-5-12</div>
+		<div class="col-2-6">col-2-6</div>
+		<div class="col-1-4">col-1-4</div>
+		<div class="col-8-12">col-2-12</div>
+		<div class="col-4-6">col-4-6</div>
+		<div class="col-2-5">col-2-5</div>
+		<div class="col-11-12">col-11-12</div>
+	</section>	
 		
+	<article class="container grid">
+		<div class="col-10 offset-1">
+			<h1>Form</h1>
+			<p>Form styles and the real money makers: buttons.</p>
+		</div>
+		<section>
+			<div class="col-12 block-title">Form</div>
+			<div class="col-4"><label for="">This is a label</label><input type="text" placeholder="This is an input"></div>
+			<div class="col-4"><label for="">This is a label</label><input type="text" placeholder="This is an input"></div>
+			<div class="col-4"><label for="">This is a label</label>
+				<select name="" id="">
+					<option value="">I am an option</option>
+					<option value="">I am an option</option>
+					<option value="">I am an option</option>
+				</select> 
+			</div>
+			<div class="col-12"><label for="">Text Area</label><textarea name="" id="" cols="30" rows="10"></textarea></div>
+		</section>
+		<section>
+			<div class="col-12 block-title">Primary Buttons</div>
+			<div class="col-3">
+				<a href="#" class="btn">.btn</a>
+			</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-large">.btn-large</a>
+			</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-small">.btn-smal</a>
+			</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-ghost">.btn-ghost</a>
+			</div>
+			<div class="col-3">
+				<input type="button" name="">input[type=‘button’]
+			</div>
+			<div class="col-3">
+				<input type="submit" name="">input[type=‘submit’]
+			</div>
+			<div class="col-3">
+				<button>Button</button>
+			</div>
+			<div class="col-12">
+				<a href="#" class="btn btn-ful">.btn-full</a>
+			</div>
+		</section>
+	</article>
 
 	<?php include 'includes/global/footer/index.php';?>
 	<script src="/js/global.js"></script>

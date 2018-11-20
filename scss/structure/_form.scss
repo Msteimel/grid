@@ -34,6 +34,7 @@ input[type="password"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
+
 textarea,
 select {
 	@include appearance(none);
@@ -52,6 +53,8 @@ select {
 		color: $place-holder-color;
 	}
 }
+
+// input[type="option"] Need to build
 
 input[type="text"]:focus,
 input[type="password"]:focus,

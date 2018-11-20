@@ -125,6 +125,13 @@
     @media (max-width: 41.6875em) {
       .grid [class*=offset] {
         margin-left: 0; } }
+  .grid span {
+    *zoom: 1; }
+    .grid span:before, .grid span:after {
+      content: " ";
+      display: table; }
+    .grid span:after {
+      clear: both; }
 
 .grid-css {
   display: grid;
