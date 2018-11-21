@@ -1,24 +1,27 @@
 
-// Va
-
-[class*="grid"] {
-	margin: auto;
-	max-width: 1180px;
-	width: 96%;
+*, *:before, *:after {
+    box-sizing: border-box;
 }
 
 .grid {
 	@include clearfix;
 	box-sizing: border-box;
+	margin: 0 auto;
+	max-width: 1180px;
+	width: 96%;
 	
-	@for $i from 1 through $grid-12 {
+	@for $i from 1 through $grid {
 
 		.col-#{$i} {
-			width: percentage($i/$grid-12); 
+			width: percentage($i/$grid); 
+		}
+
+		.sub-col-#{$i} {
+			width: percentage($i/$grid); 
 		}
 
 		.offset-#{$i} { 
-			margin-left: percentage($i/$grid-12); 
+			margin-left: percentage($i/$grid); 
 		}
 	}
 
@@ -33,7 +36,7 @@
 			width: 100%;
 		}
 		
-		[class*=col-] { 
+		[class*=sub-col-] { 
 			padding: 0;
 		 }
 
@@ -50,16 +53,15 @@
 			margin-left: 0;
 		}
 	}
-
-	span {
-		@include clearfix;
-	}
 }
 
 .grid-css {
 	display: grid;
 	grid-auto-columns: 1fr;
 	grid-template-columns: repeat($grid-css, 1fr);
+	margin: 0 auto;
+	max-width: 1180px;
+	width: 96%;
 
 	@for $col-start from 1 through $grid-css {
 		@for $col-end from 1 through $grid-css {

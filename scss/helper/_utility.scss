@@ -2,3 +2,46 @@
 // clearfix is a prime example. If you wanted to do a text-center class.
 // basically you attach a property or style to a single class that
 // changes the element accordingly.
+
+.block-title {
+	@include responsive-text(18px, 22px);
+	border-left: 5px solid $blue-900;
+	color: $blue-700;
+	margin-bottom: em(18);
+	padding-left: em(12);
+}
+
+.clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.comment {
+	color: #aaa;
+	margin: 0;
+	padding: 0;
+}
+
+.lead {@include responsive-text(18px, 20px);color:$blue-700;font-weight:700;}
+
+.space-large {
+	@include clearfix;
+	margin-top: em($spacing-large);
+}
+
+.space-med {
+	margin-top: em($spacing-med);
+}
+
+.space-small {
+	margin-top: em($spacing-small);
+}

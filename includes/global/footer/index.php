@@ -1,5 +1,33 @@
-<div class="grid-12 container">
-	<footer class="col-12">
-		<h2>footer</h2>
-	</footer>
-</div>
+<footer>
+	<nav class="footer-nav col-10 offset-1">
+		<ul class="navigation-footer">
+			<li class="nav-1">
+				<a href="#">Type</a>
+			</li>
+			<li class="nav-2">
+				<a href="#">Grids</a>
+			</li>
+			<li class="nav-3">
+				<a href="#">Forms</a>
+			</li>
+			<li class="nav-4">
+				<a href="#">Tables</a>
+			</li>
+			<li class="nav-5">
+				<a href="#">Blocks</a>
+				<div class="nav-menu">
+					<ul class="nav-menu--col">
+						<li><a href="#">Link 1</a></li>
+						<li><a href="#">Link 2</a></li>
+						<li><a href="#">Link 3</a></li>
+					</ul>
+					<ul class="nav-menu--col">
+						<li><a href="#">Link 4</a></li>
+						<li><a href="#">Link 5</a></li>
+						<li><a href="#">Link 6</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</footer>

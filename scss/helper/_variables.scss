@@ -3,24 +3,31 @@
 				// Color Variables
 ==================================================*/
 // Constant
-$black: #222;
+$black: #333;
 $white: #fff;
 
 // site colors
-$lightest-blue: #EDF9FC;
-$light-blue: #D1F4FA;
-$dark-blue: #53CDE2;
-$darkest-blue:#005792;
+$blue-100: #EDF9FC;
+$blue-300: #D1F4FA;
+$blue-500: #53CDE2;
+$blue-700: #005792;
+$blue-900: #003559;
 
 /*================================================
 				// Site Styles
 ==================================================*/
-$pirmary-color: $darkest-blue;
-$secondary-color: $dark-blue;
-$link-color: $secondary-color;
+$pirmary-color: $blue-500;
+$secondary-color: $blue-700;
+$link-color: $blue-500;
 
-$nav-link:$white;
+$nav-link: $white;
 
+$color-h1: $blue-900;
+$color-h2: $black;
+$color-h3: $blue-700;
+$color-h4: $blue-900;
+$color-h5: $black;
+$color-h6: $blue-700;
 
 /*================================================
 					Breakpoints
@@ -38,7 +45,7 @@ $lg: 1901;
 				// Grid column variables
 ==================================================*/
 
-$grid-12: 12;
+$grid: 12;
 $grid-css: 12;
 $grid-css-row: 100;
 
@@ -57,9 +64,9 @@ $em-base-max: 20;
 	// Component Spacing
 ==================================================*/
 
-$spacing-container: 32;
-$spacing-block: 24;
-$spacing-bit: 16;
+$spacing-large: 64;
+$spacing-med: 32;
+$spacing-small: 16;
 
 
 /*================================================

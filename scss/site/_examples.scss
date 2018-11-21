@@ -1,0 +1,46 @@
+
+.para-examples {
+	p {
+		margin-bottom: 0.25rem;
+	}
+}
+
+.example-grid {
+	[class*=col-] {
+		text-align: center;
+
+		div {
+			background-color: $blue-700;
+			border-radius: 3px;
+			box-shadow: 2px 3px 5px #ccc;
+			color: $white;
+			padding: 1rem;
+			transition: background-color 0.3s ease;
+			
+			&:hover {
+				background-color: lighten($blue-700, 10%);
+			}
+		}
+	}
+
+	[class*=offset-] {
+		text-align: center;
+
+		div {
+			background-color: $white;
+			border: 2px solid $blue-700;
+			box-shadow: 2px 3px 5px #ccc;
+			border-radius: 3px;
+			color: $blue-700;
+			padding: 1rem;
+			transition: background-color 0.3s ease;
+			
+			&:hover {
+				background-color: lighten($blue-700, 10%);
+				color: $white;
+			}
+		}
+	}
+}
+
+

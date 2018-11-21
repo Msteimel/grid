@@ -20,12 +20,12 @@
 		<div class="hero--overlay"></div>	
 	</section>
 
-	<article class="container grid">
+	<article class="grid type">
 		<div class="col-10 offset-1">
-				<h1>Type Style</h1>
-				<p>The text is fully responsive by using ems on a per element basis or using an include that allows you set the min and max font size. </p>
-			<section class="block">
-				<div class="col-6">
+				<h1 class="section-title">Type Style</h1>
+				<p class="lead">The text is fully responsive by using ems on a per element basis or using an include that allows you set the min and max font size. </p>
+			<section class="block clearfix">
+				<div class="sub-col-6 space-med">
 					<div class="block-title">Headings</div>
 					<h1>Heading 1</h1>
 					<h2>Heading 2</h2>
@@ -34,40 +34,44 @@
 					<h5>Heading 5</h5>
 					<h6>Heading 6</h6>
 				</div>
-				<div class="col-6">
-					<div class="block-title">Pararaph Tags</div>
+				<div class="sub-col-6 para-examples">
+					<div class="block-title space-med">Pararaph Tags</div>
 					<p class="lead">This is a lead paragraph</p>
 					<p><strong>This is a strong paragraph</strong></p>
 					<p>This is a normal paragraph</p>
 					<p><em>This is a em/italic paragraph</em></p>
 					<a href="#">This is an anchor tag</a>
-					<div class="block-title">Code</div>
-					<div class="codeblock">
-						<span>code-block {</span>
-							<span>border: 1px solid #333;</span>
-							<span>padding: 0.5em;</span>
-							<span>text-align: center;</span>
-						<span>}</span>
-					</div>
+					<div class="block-title space-small">Codeblock</div>
+					<pre class="codeblock">
+<span class="comment">// this is a comment</span>
+.codeblock {
+	border: 1px solid #333;
+	padding: 0.5em;
+	text-align: center;
+}</pre>
+					<div class="block-title space-small">Inline-code</div>
 					<code>.code { padding: 0.5em; }</code>
 				</div>
 			</section>
-			<section class="block">
-				<div class="col-4">
+			<section class="space-med clearfix">
+				<div class="sub-col-4">
+					<div class="block-title">Unordered List</div>
 					<ul>
 						<li>Dolore non nisi quis sit.</li>
 						<li>Mollit enim.</li>
 						<li>Lorem ipsum nulla duis incididunt.</li>
 					</ul>
 				</div>
-				<div class="col-4">
+				<div class="sub-col-4">
+					<div class="block-title">Ordered List</div>
 					<ol>
 						<li>In amet esse nulla.</li>
 						<li>Excepteur dolore.</li>
 						<li>Et cupidatat dolor.</li>
 					</ol>
 				</div>
-				<div class="col-4">
+				<div class="sub-col-4">
+					<div class="block-title">Plain List</div>
 					<ul class="list--plain">
 						<li>Eu non.</li>
 						<li>Aute quis eu.</li>
@@ -75,18 +79,19 @@
 					</ul>
 				</div>
 			</section>
-			<section class="block">
-				<ul class="inline-list">
+			<section class=" space-med col-12 clearfix">
+				<div class="block-title">Inline List</div>
+				<ul class="sub-col-12 list--inline">
 					<li>Et velit in.</li>
-					<li>Lorem ipsum culpa eiusmod minim.</li>
-					<li>Lorem ipsum sit excepteur.</li>
+					<li>Lorem.</li>
+					<li>excepteur.</li>
 					<li>Pariatur eu.</li>
-					<li>Occaecat ex reprehenderit.</li>
+					<li>reprehenderit.</li>
 				</ul>
 			</section>
-			<section>
+			<section class="space-med col-12">
 				<div class="block-title">Block Quote</div>
-				<blockquote>
+				<blockquote class="blockquote">
 					Reprehenderit consequat consectetur consequat laborum reprehenderit officia cillum et laboris sunt culpa duis esse velit sit consectetur est cillum mollit ut consequat qui.
 					<cite>Billy</cite>
 				</blockquote>
@@ -95,71 +100,74 @@
 		</div>
 	</article>
 
-	<article class="container grid">
+	<article class="grid space-large">
 		<div class="col-10 offset-1">
-			<h1>Grid</h1>
+			<h1 class="section-title">Grid</h1>
 			<p class="lead">There are two grids, one in the more traditional vien using floats and a sass function based on the number of columns desired. The second grid is done in css-grid to all for more flexible and precise control.</p>
 		</div>
 	</article>
 	<section class="grid">
-		<div class="col-10 offset-1">
-			<section class="block">Traditional Grid <code>.grid</code></section>
+		<div class="col-10 offset-1 space-med">
+			<section class="block-title">Traditional Grid <code>.grid</code></section>
 			<p>This tradition grid is set to a 12 column layout by default. Using `.col-#` to define the width of the column and using `.offset-#` to push the columnd form the right. it first needs to be wrapped in `.grid`</p>
 		</div>
-		<div class="col-11">11</div><div class="col-1">col-1</div>
-		<div class="col-10">10</div><div class="col-2">col-2</div>
-		<div class="col-9">9</div><div class="col-3">col-3</div>
-		<div class="col-8">8</div><div class="col-4">col-4</div>
-		<div class="col-7">7</div><div class="col-5">col-5</div>
-		<div class="col-6">6</div><div class="col-6">col-6</div>
-		<div class="col-5">5</div><div class="col-7">col-7</div>
-		<div class="col-4">4</div><div class="col-8">col-8</div>
-		<div class="col-3">3</div><div class="col-9">col-9</div>
-		<div class="col-2">2</div><div class="col-10">col-10</div>
-		<div class="col-1">1</div><div class="col-11">col-11</div>
-		<div class="col-12">12</div>
+		<div class="example-grid">
+			<div class="col-11"><div>col-11</div></div><div class="col-1"><div>1</div></div>
+			<div class="col-10"><div>col-10</div></div><div class="col-2"><div>col-2</div></div>
+			<div class="col-9"><div>col-9</div></div><div class="col-3"><div>col-3</div></div>
+			<div class="col-8"><div>col-8</div></div><div class="col-4"><div>col-4</div></div>
+			<div class="col-7"><div>col-7</div></div><div class="col-5"><div>col-5</div></div>
+			<div class="col-6"><div>col-6</div></div><div class="col-6"><div>col-6</div></div>
+			<div class="col-5"><div>col-5</div></div><div class="col-7"><div>col-7</div></div>
+			<div class="col-4"><div>col-4</div></div><div class="col-8"><div>col-8</div></div>
+			<div class="col-3"><div>col-3</div></div><div class="col-9"><div>col-9</div></div>
+			<div class="col-2"><div>col-2</div></div><div class="col-10"><div>col-10</div></div>
+			<div class="col-1"><div>1</div></div><div class="col-11"><div>col-11</div></div>
+			<div class="col-12"><div>col-12</div></div>
+		</div>
 	</section>
 	<section class="grid">
-		<div class="col-10 offset-1">
-			<section class="block">Traditional Grid &ndash; Offest <code>.grid</code></section>
+		<div class="col-10 offset-1 space-med">
+			<section class="block-title">Traditional Grid &ndash; Offest <code>.grid</code></section>
 			<p>This tradition grid is set to a 12 column layout by default. Using `.col-#` to define the width of the column and using `.offset-#` to push the columnd form the right. it first needs to be wrapped in `.grid`</p>
 		</div>
-		<div class="col-12">No offset</div>
-		<div class="offset-1 col-11">Offset-1</div>
-		<div class="offset-2 col-10">Offset-2</div>
-		<div class="offset-3 col-9">Offset-3</div>
-		<div class="offset-4 col-8">Offset-4</div>
-		<div class="offset-5 col-7">Offset-5</div>
-		<div class="offset-6 col-6">Offset-6</div>
-		<div class="offset-7 col-5">Offset-7</div>
-		<div class="offset-8 col-4">Offset-8</div>
-		<div class="offset-9 col-3">Offset-9</div>
-		<div class="offset-10 col-2">Offset-10</div>
-		<div class="offset-11 col-1">OS-11</div>
+		<div class="example-grid">
+			<div class="offset-1 col-11"><div>Offset-1</div></div>
+			<div class="offset-2 col-10"><div>Offset-2</div></div>
+			<div class="offset-3 col-9"><div>Offset-3</div></div>
+			<div class="offset-4 col-8"><div>Offset-4</div></div>
+			<div class="offset-5 col-7"><div>Offset-5</div></div>
+			<div class="offset-6 col-6"><div>Offset-6</div></div>
+			<div class="offset-7 col-5"><div>Offset-7</div></div>
+			<div class="offset-8 col-4"><div>Offset-8</div></div>
+			<div class="offset-9 col-3"><div>Offset-9</div></div>
+			<div class="offset-10 col-2"><div>Offset-10</div></div>
+			<div class="offset-11 col-1"><div>11</div></div>
+		</div>
 	</section>
 
-	<section class="grid-css">
+	<section class="grid-css example-grid">
 		<div class="col-2-11">
-			<section class="block">Css Grid <code>.grid-css</code></section>
+			<section class="block-title">Css Grid <code>.grid-css</code></section>
 			<p>`.grid-css` allows you to specifically place a column using `.col-#-#` for the start and end line of the column.  You can also use `.row-#-#` to set the height of an element, however it seems to work best to use it for all elements, or not at all.</p>
 		</div>
-		<div class="col-1-12">col-1-12</div>
-		<div class="col-2-12">col-2-12</div>
-		<div class="col-3-12">col-3-12</div>
-		<div class="col-4-12">col-4-12</div>
-		<div class="col-5-12">col-5-12</div>
-		<div class="col-2-6">col-2-6</div>
-		<div class="col-1-4">col-1-4</div>
-		<div class="col-8-12">col-2-12</div>
-		<div class="col-4-6">col-4-6</div>
-		<div class="col-2-5">col-2-5</div>
-		<div class="col-11-12">col-11-12</div>
+		<div class="col-1-12"><div>col-1-12</div></div>
+		<div class="col-2-3"><div>col-2-3</div></div>
+		<div class="col-6-10"><div>col-6-10</div></div>
+		<div class="col-4-12"><div>col-4-12</div></div>
+		<div class="col-5-12"><div>col-5-12</div></div>
+		<div class="col-2-6"><div>col-2-6</div></div>
+		<div class="col-1-4"><div>col-1-4</div></div>
+		<div class="col-8-12"><div>col-2-12</div></div>
+		<div class="col-4-6"><div>col-4-6</div></div>
+		<div class="col-2-5"><div>col-2-5</div></div>
+		<div class="col-11-12"><div>col-11-12</div></div>
 	</section>	
 		
-	<article class="container grid">
+	<article class="grid spacing-large">
 		<div class="col-10 offset-1">
-			<h1>Form</h1>
-			<p>Form styles and the real money makers: buttons.</p>
+			<h1 class="section-title">Form</h1>
+			<p class="lead">Form styles and the real money makers: buttons.</p>
 		</div>
 		<section>
 			<div class="col-12 block-title">Form</div>
@@ -189,18 +197,94 @@
 				<a href="#" class="btn btn-ghost">.btn-ghost</a>
 			</div>
 			<div class="col-3">
-				<input type="button" name="">input[type=‘button’]
+				<input type="button" class="button" name="">input[type=‘button’]
 			</div>
 			<div class="col-3">
-				<input type="submit" name="">input[type=‘submit’]
+				<input type="submit" class="button" name="">input[type=‘submit’]
 			</div>
 			<div class="col-3">
-				<button>Button</button>
+				<button class="btn">Button</button>
 			</div>
 			<div class="col-12">
-				<a href="#" class="btn btn-ful">.btn-full</a>
+				<a href="#" class="btn btn-full">.btn-full</a>
 			</div>
 		</section>
+		<section>
+			<div class="col-12 block-title">Secodary Buttons</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-secondary">.btn</a>
+			</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-large btn-secondary">.btn-large</a>
+			</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-small btn-secondary">.btn-smal</a>
+			</div>
+			<div class="col-3">
+				<a href="#" class="btn btn-ghost btn-secondary">.btn-ghost</a>
+			</div>
+			<div class="col-3">
+				<input type="button" class="btn btn-secondary" name="">input[type=‘button’]
+			</div>
+			<div class="col-3">
+				<input type="submit" name="btn btn-secondary">input[type=‘submit’]
+			</div>
+			<div class="col-3">
+				<button class="btn btn-secondary">Button</button>
+			</div>
+			<div class="col-12">
+				<a href="#" class="btn btn-full btn-secondary">.btn-full</a>
+			</div>
+		</section>
+	</article>
+
+	<article class="grid">
+		<div class="col-10 offset-1">
+			<h1 class="section-title">Tables</h1>
+			<p>Cause we all have to display some data every once in awhile.</p>
+		</div>
+		<div class="col-12 block-title">Primary Table</div>
+		<table class="col-12">
+			<thead>
+				<tr>
+					<th>Column 1</th>
+					<th>Column 2</th>
+					<th>Column 3</th>
+					<th>Column 4</th>
+					<th>Column 5</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Body head</th>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+				<tr>
+					<th>Body head</th>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+				<tr>
+					<th>Body head</th>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+				<tr>
+					<th>Body head</th>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+			</tbody>
+		</table>
 	</article>
 
 	<?php include 'includes/global/footer/index.php';?>

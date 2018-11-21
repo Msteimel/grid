@@ -1,47 +1,48 @@
 
-html, .root {
-  
-}
-
 body {
   @include responsive-text($min-font, $max-font);
-
-  font-family: sans-serif;
+  font-family: "system";
   line-height: $line-height;
   margin: auto;
 }
 h1, .h1 {
   @include responsive-text(45px, 64px);
+  color: $color-h1;
   line-height: 1.14705882em;
   margin-top: 0.38235294em;
   margin-bottom: 0.76470588em;
 }
 h2, .h2 {
   @include responsive-text(28px, 48px);
+  color: $color-h2;
   line-height: 1.46808511em;
   margin-top: 0.4893617em;
   margin-bottom: 0.4893617em;
 }
 h3, .h3 {
   @include responsive-text(24px, 32px);
+  color: $color-h3;
   line-height: 1.5862069em;
   margin-top: 0.79310345em;
   margin-bottom: 0em;
 }
 h4, .h4 {
   @include responsive-text(18px, 24px);
+  color: $color-h4;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 h5, .h5 {
  @include responsive-text(16px, 20px);
+ color: $color-h5;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
 }
 h6, .h6 {
   @include responsive-text(16px, 18px);
+  color: $color-h6;
   line-height: 1.27777778em;
   margin-top: 1.27777778em;
   margin-bottom: 0em;
@@ -51,11 +52,14 @@ p {
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;
-  margin-bottom: 1.625em;
+  margin-bottom: 1em;
 }
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0em;
   margin-bottom: 0em;
+}
+a{
+  color: $link-color;
 }
 
 /* Let's make sure all's aligned */
@@ -76,4 +80,12 @@ sup {
 }
 sub {
   bottom: -0.25em;
+}
+strong{
+  color: $blue-900;
+}
+code{
+  background-color: $blue-900;
+  color: $blue-300;
+
 }

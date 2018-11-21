@@ -15,12 +15,13 @@
 		@include responsive-text(18px, 22px);
 		display: block;
 		margin: 0 auto;
-		max-width: 800px;
+		max-width: 600px;
 	}
 }
 
 .hero--headline {
 	@include responsive-text(45px, 75px);
+	color: $white;
 }
 
 .hero--overlay {
