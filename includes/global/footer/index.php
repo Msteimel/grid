@@ -2,19 +2,19 @@
 	<nav class="footer-nav col-10 offset-1">
 		<ul class="navigation-footer">
 			<li class="nav-1">
-				<a href="#">Type</a>
+				<a href="#type">Type</a>
 			</li>
 			<li class="nav-2">
-				<a href="#">Grids</a>
+				<a href="#grids">Grids</a>
 			</li>
 			<li class="nav-3">
-				<a href="#">Forms</a>
+				<a href="#forms">Forms</a>
 			</li>
 			<li class="nav-4">
-				<a href="#">Tables</a>
+				<a href="#tables">Tables</a>
 			</li>
 			<li class="nav-5">
-				<a href="#">Blocks</a>
+				<a href="#blocks">Blocks</a>
 				<div class="nav-menu">
 					<ul class="nav-menu--col">
 						<li><a href="#">Link 1</a></li>

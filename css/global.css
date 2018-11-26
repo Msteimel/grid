@@ -37,8 +37,9 @@
 .block-title {
   font-size: 18px;
   border-left: 5px solid #003559;
+  display: inline-block;
   color: #005792;
-  margin-bottom: 1.125em;
+  margin-bottom: 0.75em;
   padding-left: 0.75em; }
   @media screen and (min-width: 41.6875em) {
     .block-title {
@@ -46,9 +47,12 @@
   @media screen and (min-width: 68.8125em) {
     .block-title {
       font-size: 22px; } }
+  .block-title code {
+    vertical-align: middle; }
 
 .clearfix {
-  *zoom: 1; }
+  *zoom: 1;
+  clear: both; }
   .clearfix:before, .clearfix:after {
     content: " ";
     display: table; }
@@ -73,7 +77,7 @@
 
 .space-large {
   *zoom: 1;
-  margin-top: 4em; }
+  padding-top: 4em; }
   .space-large:before, .space-large:after {
     content: " ";
     display: table; }
@@ -81,10 +85,10 @@
     clear: both; }
 
 .space-med {
-  margin-top: 2em; }
+  padding-top: 2em; }
 
 .space-small {
-  margin-top: 1em; }
+  padding-top: 1em; }
 
 @font-face {
   font-family: system;
@@ -30771,7 +30775,15 @@ textarea {
   list-style: none; }
 
 .list--inline {
-  list-style: none; }
+  *zoom: 1;
+  list-style: none;
+  padding: 0;
+  width: 100%; }
+  .list--inline:before, .list--inline:after {
+    content: " ";
+    display: table; }
+  .list--inline:after {
+    clear: both; }
   .list--inline li {
     display: block;
     float: left;
@@ -30915,6 +30927,8 @@ p {
   @media screen and (min-width: 68.8125em) {
     p {
       font-size: 20px; } }
+  p code {
+    vertical-align: middle; }
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;
@@ -30955,7 +30969,9 @@ code {
 
 .codeblock, pre, code {
   background-color: #003559;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   color: #D1F4FA;
+  display: inline-block;
   margin: 0;
   font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
   font-size: 0.8rem;
@@ -30968,18 +30984,33 @@ code {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   border-radius: 3px;
-  padding: 1rem;
+  padding: 0.5rem;
   overflow: auto; }
 
 blockquote, .blockquote {
   border-left: 5px solid #003559;
   font-style: italic;
   margin: 0 0 1rem;
-  padding-left: 1rem; }
+  padding: 1em; }
+
+blockquote.quote {
+  padding: 2em;
+  position: relative; }
+  blockquote.quote::before, blockquote.quote::after {
+    font-size: 3em;
+    position: absolute; }
+  blockquote.quote::before {
+    content: "\201C";
+    left: 0;
+    top: 0; }
+  blockquote.quote::after {
+    bottom: -1rem;
+    content: "\201D";
+    right: 0; }
 
 cite {
   display: block;
-  font-style: normal;
+  font-size: 1.15em;
   text-align: right; }
 
 .button,
@@ -30992,6 +31023,7 @@ input[type="button"] {
   border: 1px solid #003559;
   border-radius: 4px;
   box-sizing: border-box;
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -31230,7 +31262,7 @@ li[class*="nav-"] {
 
 .section-title + .lead {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 920px;
   text-align: center; }
 
 .para-examples p {
@@ -31241,7 +31273,7 @@ li[class*="nav-"] {
   .example-grid [class*=col-] div {
     background-color: #005792;
     border-radius: 3px;
-    box-shadow: 2px 3px 5px #ccc;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
     color: #fff;
     padding: 1rem;
     transition: background-color 0.3s ease; }
@@ -31253,7 +31285,7 @@ li[class*="nav-"] {
   .example-grid [class*=offset-] div {
     background-color: #fff;
     border: 2px solid #005792;
-    box-shadow: 2px 3px 5px #ccc;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
     border-radius: 3px;
     color: #005792;
     padding: 1rem;

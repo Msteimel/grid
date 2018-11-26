@@ -49,6 +49,10 @@ h6, .h6 {
 }
 p {
     @include responsive-text( 14px, 20px);
+    
+    code {
+      vertical-align: middle;
+    }
 }
 p, ul, ol, pre, table, blockquote {
   margin-top: 0em;

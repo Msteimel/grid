@@ -6,13 +6,19 @@
 .block-title {
 	@include responsive-text(18px, 22px);
 	border-left: 5px solid $blue-900;
+	display: inline-block;
 	color: $blue-700;
-	margin-bottom: em(18);
+	margin-bottom: em(12);
 	padding-left: em(12);
+	
+	code {
+		vertical-align: middle;
+	}
 }
 
 .clearfix {
   *zoom: 1;
+   clear: both;
 
   &:before,
   &:after {
@@ -35,13 +41,13 @@
 
 .space-large {
 	@include clearfix;
-	margin-top: em($spacing-large);
+	padding-top: em($spacing-large);
 }
 
 .space-med {
-	margin-top: em($spacing-med);
+	padding-top: em($spacing-med);
 }
 
 .space-small {
-	margin-top: em($spacing-small);
+	padding-top: em($spacing-small);
 }
