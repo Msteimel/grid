@@ -158,7 +158,7 @@
 		<div class="col-5-12"><div>col-5-12</div></div>
 		<div class="col-2-6"><div>col-2-6</div></div>
 		<div class="col-1-4"><div>col-1-4</div></div>
-		<div class="col-8-12"><div>col-2-12</div></div>
+		<div class="col-8-12"><div>col-8-12</div></div>
 		<div class="col-4-6"><div>col-4-6</div></div>
 		<div class="col-2-5"><div>col-2-5</div></div>
 		<div class="col-11-12"><div>col-11-12</div></div>
@@ -182,58 +182,38 @@
 			</div>
 			<div class="col-12"><label for="">Text Area</label><textarea name="" id="" cols="30" rows="10"></textarea></div>
 		</section>
-		<section>
+		<section class="space-med clearfix">
 			<div class="col-12 block-title">Primary Buttons</div>
-			<div class="col-3">
-				<a href="#" class="btn">.btn</a>
-			</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-large">.btn-large</a>
-			</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-small">.btn-smal</a>
-			</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-ghost">.btn-ghost</a>
-			</div>
-			<div class="col-3">
-				<input type="button" class="button" name="">input[type=‘button’]
-			</div>
-			<div class="col-3">
-				<input type="submit" class="button" name="">input[type=‘submit’]
-			</div>
-			<div class="col-3">
-				<button class="btn">Button</button>
+			<div class="col-12">
+				<a href="#" class="button button-large">.button-large</a>
+				<a href="#" class="button">.button</a>
+				<a href="#" class="button button-ghost">.button-ghost</a>
+				<a href="#" class="button button-small">.button-small</a>
 			</div>
 			<div class="col-12">
-				<a href="#" class="btn btn-full">.btn-full</a>
+				<input type="button" class="button" name="" value="input[type=‘button’]">
+				<input type="submit" class="button" name="" value="input[type=‘submit’]">
+				<button class="button">Button</button>
+			</div>
+			<div class="col-12">
+				<a href="#" class="button button-full">.button-full</a>
 			</div>
 		</section>
 		<section>
-			<div class="col-12 block-title">Secodary Buttons</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-secondary">.btn</a>
-			</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-large btn-secondary">.btn-large</a>
-			</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-small btn-secondary">.btn-smal</a>
-			</div>
-			<div class="col-3">
-				<a href="#" class="btn btn-ghost btn-secondary">.btn-ghost</a>
-			</div>
-			<div class="col-3">
-				<input type="button" class="btn btn-secondary" name="">input[type=‘button’]
-			</div>
-			<div class="col-3">
-				<input type="submit" name="btn btn-secondary">input[type=‘submit’]
-			</div>
-			<div class="col-3">
-				<button class="btn btn-secondary">Button</button>
+			<div class="col-12 block-title">Secondary Buttons</div>
+			<div class="col-12">
+				<a href="#" class="button button-large button-secondary">.button-large</a>
+				<a href="#" class="button button-secondary">.button</a>
+				<a href="#" class="button button-ghost button-secondary">.button-ghost</a>
+				<a href="#" class="button button-small button-secondary">.button-small</a>
 			</div>
 			<div class="col-12">
-				<a href="#" class="btn btn-full btn-secondary">.btn-full</a>
+				<input type="button" class="button button-secondary" name="" value="input[type=‘button’]">
+				<input type="submit" class="button button-secondary" value="input[type=‘submit’]">
+				<button class="button button-secondary">Button</button>
+			</div>
+			<div class="col-12">
+				<a href="#" class="button button-full button-secondary">.button-full</a>
 			</div>
 		</section>
 	</article>
@@ -241,53 +221,82 @@
 	<article class="grid">
 		<div class="col-10 offset-1">
 			<h1 class="section-title">Tables</h1>
-			<p>Cause we all have to display some data every once in awhile.</p>
+			<p class="lead">Cause we all have to display some data every once in awhile.</p>
 		</div>
 		<div class="col-12 block-title">Primary Table</div>
-		<table class="col-12">
-			<thead>
-				<tr>
-					<th>Column 1</th>
-					<th>Column 2</th>
-					<th>Column 3</th>
-					<th>Column 4</th>
-					<th>Column 5</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th>Body head</th>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-				</tr>
-				<tr>
-					<th>Body head</th>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-				</tr>
-				<tr>
-					<th>Body head</th>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-				</tr>
-				<tr>
-					<th>Body head</th>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-					<td>Data</td>
-				</tr>
-			</tbody>
-		</table>
+		<div class=>
+			<table class="table">
+				<thead class="table-head">
+					<tr>
+						<th>Column 1</th>
+						<th>Column 2</th>
+						<th>Column 3</th>
+						<th>Column 4</th>
+						<th>Column 5</th>
+					</tr>
+				</thead>
+				<tbody class=table-body>
+					<tr>
+						<th data-title="Column 1">Body head</th>
+						<td data-title="Column 2">Data</td>
+						<td data-title="Column 3">Data</td>
+						<td data-title="Column">Data</td>
+						<td data-title="Column">Data</td>
+					</tr>
+					<tr>
+						<th data-title="Column 1">Body head</th>
+						<td data-title="Column 2">Data</td>
+						<td data-title="Column 3">Data</td>
+						<td data-title="Column 4">Data</td>
+						<td data-title="Column 5">Data</td>
+					</tr>
+					<tr>
+						<th data-title="Column 1">Body head</th>
+						<td data-title="Column 2">Data</td>
+						<td data-title="Column 3">Data</td>
+						<td data-title="Column 4">Data</td>
+						<td data-title="Column 5">Data</td>
+					</tr>
+					<tr>
+						<th data-title="Column 1">Body head</th>
+						<td data-title="Column 2">Data</td>
+						<td data-title="Column 3">Data</td>
+						<td data-title="Column 4">Data</td>
+						<td data-title="Column 5">Data</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- <ul class="table-flex">
+			<li class="downloads-table--head">
+				<span class="number">No.</span>
+				<span class="description">Description</span>
+				<span class="language">Language</span>
+				<span class="file">File Type</span>
+				<span class="update">Updated</span>
+			</li>
+			<li class="downloads--file-details">
+				<span class="number"></span>
+				<span class="description"></span>
+				<div class="language">
+					
+						<span class="language--eng"><a href="">Eng </a></span>
+					
+						<span class="language--esp"><a href="">ESP</a></span>
+				
+						<span class="language--por"><a href="">ESP</a></span>
+					
+				</div>
+				<span class="file"><a href="hi.pdf"></a></span>
+				<span class="update"></span>
+			</li>
+		</ul>	 -->
 	</article>
 
-	<?php include 'includes/global/footer/index.php';?>
+	<div class="footer-wrap">
+		<?php include 'includes/global/footer/index.php';?>		
+	</div>
+	
 	<script src="/js/global.js"></script>
 </body>
 </html>
