@@ -137,8 +137,8 @@ select {
   box-sizing: border-box;
   font-size: 0.8em;
   color: #ababab;
-  line-height: 1.6;
-  padding: 0.5rem;
+  line-height: 2.0;
+  padding: 0.5rem 0.5em 0.25rem;
   outline: none;
   width: 100%; }
   input[type="text"] select, input[type="text"]::placeholder,
@@ -167,6 +167,24 @@ select:focus,
   color: #333;
   background-color: #efefef;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
+.input-wrap {
+  position: relative; }
+
+.label {
+  color: #333;
+  font-size: 0.8em;
+  left: 19px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+input:focus ~ .label,
+input:not(:focus):valid ~ .label,
+select ~ .label {
+  font-size: 12px;
+  top: 0;
+  transform: translateY(0); }
 
 input[type="radio"] {
   margin: 0.5rem;
@@ -205,6 +223,14 @@ select {
 
 textarea {
   min-height: 9.375em; }
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1; }
 
 *, *:before, *:after {
   box-sizing: border-box; }

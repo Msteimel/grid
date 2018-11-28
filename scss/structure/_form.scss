@@ -29,12 +29,13 @@ label {
 	font-size: 0.8em;
 }
 
+
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
 input[type="number"],
-
 textarea,
 select {
 	@include appearance(none);
@@ -43,8 +44,8 @@ select {
 	box-sizing: border-box;
 	font-size: 0.8em;
 	color: $place-holder-color;
-	line-height: $line-height;
-	padding: 0.5rem;
+	line-height: 2.0;
+	padding: 0.5rem 0.5em 0.25rem;;
 	outline: none;
 	width: 100%;
 	
@@ -70,6 +71,33 @@ select:focus,
 	@if $input-box-shadow{
 		box-shadow:  $input-box-shadow-value;
 	} 
+}
+
+.input-wrap {
+	position: relative;
+}
+
+.label {
+	color: $black;
+	font-size: 0.8em;
+	left: 19px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+input:focus ~ .label,
+input:not(:focus):valid ~ .label,
+select ~ .label {
+	font-size: 12px;
+	top: 0;
+	transform: translateY(0);
+	
+}
+
+textarea:focus ~ .label,
+textarea:not(:focus):valid ~ .label, {
+	
 }
 
 $color2: #3197EE;
@@ -146,4 +174,13 @@ select {
 
 textarea {
 	min-height: em(150);
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 8px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 11px;
+  opacity: 1;
 }
