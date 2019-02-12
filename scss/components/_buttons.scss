@@ -1,16 +1,17 @@
 
+
 .button,
 button,
 input[type="reset"],
 input[type="submit"],
 input[type="button"] {
 	@include responsive-text( 14px, 20px);
-	background-color: $blue-700;
-	border: 1px solid $blue-900;
+	background-color: $button-primary-background-color;
+	border: 1px solid $button-primary-border-color;
     border-radius: 4px;
     box-sizing: border-box;
     box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-	color: $white;
+	color: $button-primary-text;
 	cursor: pointer;
 	display: inline-block;
 	font-family: "system";
@@ -22,7 +23,7 @@ input[type="button"] {
 	transition: 0.3s ease;
 	
 	&:hover {
-		background-color: lighten($blue-700, 10%)
+		background-color: lighten($button-primary-background-color, 10%)
 	}
 }
 .button-full {
@@ -41,8 +42,8 @@ input[type="button"] {
 
 .button-ghost {
 	background-color: transparent;
-	border-color: $blue-700;
-	color: $blue-700;
+	border-color: $button-primary-text;
+	color: $button-primary-text;
 	
 	&:hover {
 		background-color: darken(#fff, 5%)
@@ -53,19 +54,19 @@ input[type="button"] {
 input[type="reset"].button-secondary,
 input[type="submit"].button-secondary,
 input[type="button"].button-secondary {
-	background-color: $blue-500;
-	border-color: $blue-700;
-	color: $blue-700;
+	background-color: $button-secondary-background-color;
+	border-color: $button-secondary-border-color;
+	color: $button-secondary-text;
 	
 	&:hover {
-		background-color: lighten($blue-500, 10%)
+		background-color: lighten($button-secondary-background-color, 10%)
 	}
 }
 
 .button-ghost.button-secondary {
 	background-color: transparent;
-	border-color: $blue-500;
-	color: $blue-500;
+	border-color: $button-secondary-background-color;
+	color: $button-secondary-background-color;
 	
 	&:hover {
 		background-color: darken(#fff, 5%)

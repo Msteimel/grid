@@ -86,10 +86,10 @@ sub {
   bottom: -0.25em;
 }
 strong{
-  color: $blue-900;
+  color: $text-color;
 }
 code{
-  background-color: $blue-900;
-  color: $blue-300;
+  background-color: $secondary-color;
+  color: $primary-color;
 
 }

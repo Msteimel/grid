@@ -7,27 +7,40 @@ $black: #333;
 $white: #fff;
 
 // site colors
-$blue-100: #EDF9FC;
-$blue-300: #D1F4FA;
-$blue-500: #53CDE2;
-$blue-700: #005792;
-$blue-900: #003559;
+
 
 /*================================================
 				// Site Styles
 ==================================================*/
-$pirmary-color: $blue-500;
-$secondary-color: $blue-700;
-$link-color: $blue-500;
+$primary-color: $black;
+$secondary-color: $white;
+$link-color: #666;
 
 $nav-link: $white;
 
-$color-h1: $blue-900;
+$color-h1: $black;
 $color-h2: $black;
-$color-h3: $blue-700;
-$color-h4: $blue-900;
+$color-h3: $black;
+$color-h4: $black;
 $color-h5: $black;
-$color-h6: $blue-700;
+$color-h6: $black;
+
+$text-color: $black;
+
+
+/*================================================
+				// Button Colors
+==================================================*/
+
+// primary button colors
+$button-primary-background-color: #aaa;
+$button-primary-border-color: #666;
+$button-primary-text: $black;
+
+// secondary button colors
+$button-secondary-background-color: #666;
+$button-secondary-border-color: #aaa;
+$button-secondary-text: $white;
 
 /*================================================
 					Breakpoints

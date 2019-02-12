@@ -3,14 +3,14 @@ $footer-nav-main-links: 6; // # of top level nav links
 $footer-nav-main-height: 50; // nav-height in pixels
 $menu-columns: 2; //
 
+$footer-nav-links: $black;
+
 .footer-wrap {
 	padding-top: 2em;
 }
 
 .navigation-footer {
 	@include clearfix;
-	background: rgb(83,226,188);
-    background: linear-gradient(225deg, rgba(83,226,188,1) 0%, rgba(83,205,226,1) 20%, rgba(48,156,190,1) 46%, rgba(23,136,190,1) 72%, rgba(0,87,146,1) 100%);
 	display: flex;
 	list-style: none;
 	justify-content: space-between;
@@ -18,7 +18,7 @@ $menu-columns: 2; //
 	padding: 0;
 	
 	a {
-		color: $white;
+		color: $footer-nav-links;
 		display: block;
 		height: em($footer-nav-main-height);
 		line-height: em($footer-nav-main-height);
