@@ -30994,9 +30994,9 @@ code {
   color: #D1F4FA; }
 
 .codeblock, pre, code {
-  background-color: #003559;
+  background-color: #aaa;
   box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-  color: #D1F4FA;
+  color: #333;
   display: inline-block;
   margin: 0;
   font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
@@ -31014,7 +31014,7 @@ code {
   overflow: auto; }
 
 blockquote, .blockquote {
-  border-left: 5px solid #003559;
+  border-left: 5px solid #666;
   font-style: italic;
   margin: 0 0 1rem;
   padding: 1em; }
@@ -31242,80 +31242,3 @@ li[class*="nav-"] {
 
 .nav-6 .nav-menu {
   right: 0; }
-
-.hero {
-  background: #53e2bc;
-  background: linear-gradient(225deg, #53e2bc 0%, #53cde2 20%, #309cbe 46%, #1788be 72%, #005792 100%);
-  position: relative;
-  overflow: hidden; }
-
-.hero-content {
-  color: #fff;
-  padding: 3em 0 10em;
-  text-align: center; }
-  .hero-content p {
-    font-size: 18px;
-    display: block;
-    margin: 0 auto;
-    max-width: 600px; }
-    @media screen and (min-width: 41.6875em) {
-      .hero-content p {
-        font-size: calc(18px + (22 - 18) * (100vw - 667px) / (1101 - 667)); } }
-    @media screen and (min-width: 68.8125em) {
-      .hero-content p {
-        font-size: 22px; } }
-
-.hero--headline {
-  font-size: 45px;
-  color: #fff; }
-  @media screen and (min-width: 41.6875em) {
-    .hero--headline {
-      font-size: calc(45px + (75 - 45) * (100vw - 667px) / (1101 - 667)); } }
-  @media screen and (min-width: 68.8125em) {
-    .hero--headline {
-      font-size: 75px; } }
-
-.hero--overlay {
-  transform: rotate(-7deg);
-  background-color: #fff;
-  bottom: -5em;
-  height: 210px;
-  position: absolute;
-  width: 110%; }
-
-.section-title {
-  text-align: center; }
-
-.section-title + .lead {
-  margin: 0 auto;
-  max-width: 920px;
-  text-align: center; }
-
-.para-examples p {
-  margin-bottom: 0.25rem; }
-
-.example-grid [class*=col-] {
-  text-align: center; }
-  .example-grid [class*=col-] div {
-    background-color: #005792;
-    border-radius: 3px;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-    color: #fff;
-    padding: 1rem;
-    transition: background-color 0.3s ease; }
-    .example-grid [class*=col-] div:hover {
-      background-color: #0075c5; }
-
-.example-grid [class*=offset-] {
-  text-align: center; }
-  .example-grid [class*=offset-] div {
-    background-color: #fff;
-    border: 2px solid #005792;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.07);
-    border-radius: 3px;
-    color: #005792;
-    padding: 1rem;
-    transition: background-color 0.3s ease; }
-    .example-grid [class*=offset-] div:hover {
-      background-color: #0075c5;
-      color: #fff; }

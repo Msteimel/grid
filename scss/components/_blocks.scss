@@ -1,9 +1,14 @@
 
+$code-background-color: #aaa;
+$code-color: $black;
+
+$block-quote-border: #666;
+
 .codeblock, pre, code {
-	background-color: $blue-900;
+	background-color: $code-background-color;
     // box-shadow: 2px 3px 5px #ccc;
     box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-	color: $blue-300;
+	color: $code-color;
     display: inline-block;
     margin: 0;
     font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
@@ -22,7 +27,7 @@
 }
 
 blockquote, .blockquote {
-	border-left: 5px solid $blue-900;
+	border-left: 5px solid $block-quote-border;
 	font-style: italic;
 	margin: 0 0 1rem;
 	padding: 1em;
