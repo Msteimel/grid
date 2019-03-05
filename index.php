@@ -14,7 +14,7 @@
 			</div>
 			<div class="hero--overlay"></div>
 		</section>
-		
+
 		<article id="type" class="grid">
 			<div class="col-10 offset-1">
 				<div class="section-headlines">
