@@ -1,0 +1,27 @@
+// mixins
+@mixin load-in {
+	animation: load-in 0.5s cubic-bezier(0, 0.54, 0.97, 0.64) forwards;
+}
+
+@mixin load-in-left {
+	animation: load-in-left 0.5s ease-out forwards;
+}
+
+// staggered fade in based on number of elements
+@mixin stagger-fade-in($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-child(#{$i}).fade-in-up {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-in-reverse($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-last-child(#{$i}).fade-in-up {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}

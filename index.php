@@ -414,6 +414,7 @@
 			</table>
 		</div>
 	</article>
+	
 	<div class="footer-wrap">
 		<?php include 'includes/global/footer/index.php';?>
 	</div>

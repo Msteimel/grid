@@ -1,0 +1,37 @@
+.load-in {
+	animation: load-in 0.5s cubic-bezier(0, 0.54, 0.97, 0.64) forwards;
+}
+
+.load-in-left {
+	animation: load-in-left 0.5s ease-out forwards;
+}
+
+// Starts when in browser window
+// this section is attached to some JS
+.fade-in {
+	transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.fade-in-up {
+	transform: translateY(3em);
+}
+
+.fade-in-down {
+	transform: translateY(3em);
+}
+
+.fade-in-left {
+	transform: translateX(-3em);
+}
+
+.fade-in-right {
+	transform: translateX(3em);
+}
+
+.in-view {
+	opacity: 1;
+	transform: translate(0, 0);
+	visibility: visible;
+}

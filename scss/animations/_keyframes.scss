@@ -1,0 +1,21 @@
+@keyframes load-in-left {
+	0% {
+		opacity: 0.25;
+		transform: translateX(-3em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0em);
+	}
+}
+
+@keyframes load-in {
+	0% {
+		opacity: 0.25;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
