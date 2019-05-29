@@ -7,7 +7,7 @@
 		<?php include 'includes/global/header/index.php';?>
 		<div class="grid">
 			<div class="col-12">
-				<div class="hero-content">
+				<div class="hero-content load-in-up">
 					<h1 class="hero--headline">Another Dumb Framework</h1>
 					<p>I built this to challenge myself and learn more about frameworks and element design.</p>
 				</div>
@@ -16,7 +16,7 @@
 		<div class="hero--overlay"></div>
 	</section>
 
-	<article id="type" class="grid">
+	<section id="type" class="grid">
 		<div class="col-11">
 			<div class="section-headlines">
 				<h1 class="section-title">Type Style</h1>
@@ -24,14 +24,14 @@
 					that allows you set the min and max font size. </p>
 			</div>
 			<section class="space-large">
-				<div class="sub-col-6">
+				<div class="sub-col-6 headings-list">
 					<div class="block-title">Headings</div>
-					<h1>Heading 1</h1>
-					<h2>Heading 2</h2>
-					<h3>Heading 3</h3>
-					<h4>Heading 4</h4>
-					<h5>Heading 5</h5>
-					<h6>Heading 6</h6>
+					<h1 class="heading fade-in fade-down">Heading 1</h1>
+					<h2 class="heading fade-in fade-down">Heading 2</h2>
+					<h3 class="heading fade-in fade-down">Heading 3</h3>
+					<h4 class="heading fade-in fade-down">Heading 4</h4>
+					<h5 class="heading fade-in fade-down">Heading 5</h5>
+					<h6 class="heading fade-in fade-down">Heading 6</h6>
 				</div>
 				<div class="sub-col-6 para-examples">
 					<div class="block-title">Pararaph Tags</div>
@@ -58,7 +58,7 @@
 			</section>
 			<section class="space-med">
 				<div class="sub-grid">
-					<div class="sub-col-4">
+					<div class="sub-col-4 list fade-in fade-up">
 						<div class="block-title">Unordered List</div>
 						<ul>
 							<li>Dolore non nisi quis sit.</li>
@@ -66,7 +66,7 @@
 							<li>Lorem ipsum nulla duis incididunt.</li>
 						</ul>
 					</div>
-					<div class="sub-col-4">
+					<div class="sub-col-4 list fade-in fade-up">
 						<div class="block-title">Ordered List</div>
 						<ol>
 							<li>In amet esse nulla.</li>
@@ -74,7 +74,7 @@
 							<li>Et cupidatat dolor.</li>
 						</ol>
 					</div>
-					<div class="sub-col-4">
+					<div class="sub-col-4 list fade-in fade-up">
 						<div class="block-title">Plain List <code>.list--plain</code></div>
 						<ul class="list--plain">
 							<li>Eu non.</li>
@@ -112,8 +112,8 @@
 				</div>
 			</section>
 		</div>
-	</article>>
-	<article id="grids" class="grid">
+	</section>
+	<section id="grids" class="grid">
 		<div class="col-11">
 			<div class="section-type">
 				<div class="section-headlines">
@@ -124,7 +124,7 @@
 				</div>
 			</div>
 		</div>
-	</article>
+	</section>
 	<section class="grid">
 		<div class="col-11">
 			<div class="space-med">
@@ -297,7 +297,7 @@
 			<div>col-11-12</div>
 		</div>
 	</section>
-	<article id="forms" class="grid">
+	<section id="forms" class="grid">
 		<div class="space-large">
 			<div class="section-headlines">
 				<h1 class="section-title">Form</h1>
@@ -363,8 +363,8 @@
 				</p>
 			</section>
 		</div>
-	</article>
-	<article id="tables" class="grid">
+	</section>
+	<section id="tables" class="grid">
 		<div class="col-12">
 			<div class="space-large">
 				<h1 class="section-title">Tables</h1>
@@ -413,11 +413,12 @@
 				</tbody>
 			</table>
 		</div>
-	</article>
-	
+	</section>
+
 	<div class="footer-wrap">
 		<?php include 'includes/global/footer/index.php';?>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="/js/global.js"></script>
 </body>
 

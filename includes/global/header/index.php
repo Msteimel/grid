@@ -28,6 +28,9 @@
 					</ul>
 				</div>
 			</li>
+			<li class="nav-6">
+				<a href="#Animations">Animations</a>
+			</li>
 		</ul>
 	</nav>
 </header>
