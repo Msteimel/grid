@@ -1,12 +1,25 @@
+// Triggers on page load
 .load-in {
-	animation: load-in 0.5s cubic-bezier(0, 0.54, 0.97, 0.64) forwards;
+	@include load-in;
 }
 
 .load-in-left {
-	animation: load-in-left 0.5s ease-out forwards;
+	@include load-in-left;
 }
 
-// Starts when in browser window
+.load-in-right {
+	@include load-in-right;
+}
+
+.load-in-up {
+	@include load-in-up;
+}
+
+.load-in-down {
+	@include load-in-down;
+}
+
+// triggers when element is in
 // this section is attached to some JS
 .fade-in {
 	transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
@@ -14,22 +27,23 @@
 	visibility: hidden;
 }
 
-.fade-in-up {
+.fade-up {
 	transform: translateY(3em);
 }
 
-.fade-in-down {
-	transform: translateY(3em);
+.fade-down {
+	transform: translateY(-3em);
 }
 
-.fade-in-left {
+.fade-left {
 	transform: translateX(-3em);
 }
 
-.fade-in-right {
+.fade-right {
 	transform: translateX(3em);
 }
 
+// Gets attached on '.fade-in' when elememnt is in view.
 .in-view {
 	opacity: 1;
 	transform: translate(0, 0);

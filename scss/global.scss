@@ -1,3 +1,6 @@
+// Animations
+@import 'animations/animations';
+
 // helpers
 @import 'helper/variables';
 @import 'helper/functions';
@@ -18,7 +21,5 @@
 @import 'components/footer';
 @import 'components/header';
 
-// Animations
-@import 'animations/animations';
-
 // site styles
+@import 'site/animations';

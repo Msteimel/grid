@@ -1,0 +1,7 @@
+.heading {
+	@include stagger-fade-down(7);
+}
+
+.list {
+	@include stagger-fade-up(3);
+}

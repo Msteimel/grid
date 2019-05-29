@@ -1,6 +1,16 @@
+@keyframes load-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes load-in-left {
 	0% {
-		opacity: 0.25;
+		opacity: 0;
 		transform: translateX(-3em);
 	}
 
@@ -10,12 +20,38 @@
 	}
 }
 
-@keyframes load-in {
+@keyframes load-in-right {
 	0% {
-		opacity: 0.25;
+		opacity: 0;
+		transform: translateX(3em);
 	}
 
 	100% {
 		opacity: 1;
+		transform: translateX(0em);
+	}
+}
+
+@keyframes load-in-up {
+	0% {
+		opacity: 0;
+		transform: translateY(3em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0em);
+	}
+}
+
+@keyframes load-in-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-3em);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0em);
 	}
 }
