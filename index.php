@@ -7,7 +7,7 @@
 		<?php include 'includes/global/header/index.php';?>
 		<div class="grid">
 			<div class="col-12">
-				<div class="hero-content load-in-up">
+				<div class="hero-content fade-right">
 					<h1 class="hero--headline">Another Dumb Framework</h1>
 					<p>I built this to challenge myself and learn more about frameworks and element design.</p>
 				</div>
@@ -24,14 +24,16 @@
 					that allows you set the min and max font size. </p>
 			</div>
 			<section class="space-large">
-				<div class="sub-col-6 headings-list">
+				<div class="sub-col-6">
 					<div class="block-title">Headings</div>
-					<h1 class="heading fade-in fade-down">Heading 1</h1>
-					<h2 class="heading fade-in fade-down">Heading 2</h2>
-					<h3 class="heading fade-in fade-down">Heading 3</h3>
-					<h4 class="heading fade-in fade-down">Heading 4</h4>
-					<h5 class="heading fade-in fade-down">Heading 5</h5>
-					<h6 class="heading fade-in fade-down">Heading 6</h6>
+					<div class="stagger-fade-up-reverse">
+						<h1>Heading 1</h1>
+						<h2>Heading 2</h2>
+						<h3>Heading 3</h3>
+						<h4>Heading 4</h4>
+						<h5>Heading 5</h5>
+						<h6>Heading 6</h6>
+					</div>
 				</div>
 				<div class="sub-col-6 para-examples">
 					<div class="block-title">Pararaph Tags</div>
@@ -58,7 +60,7 @@
 			</section>
 			<section class="space-med">
 				<div class="sub-grid">
-					<div class="sub-col-4 list fade-in fade-up">
+					<div class="sub-col-4 list animate fade-up">
 						<div class="block-title">Unordered List</div>
 						<ul>
 							<li>Dolore non nisi quis sit.</li>
@@ -66,7 +68,7 @@
 							<li>Lorem ipsum nulla duis incididunt.</li>
 						</ul>
 					</div>
-					<div class="sub-col-4 list fade-in fade-up">
+					<div class="sub-col-4 list animate fade-up">
 						<div class="block-title">Ordered List</div>
 						<ol>
 							<li>In amet esse nulla.</li>
@@ -74,7 +76,7 @@
 							<li>Et cupidatat dolor.</li>
 						</ol>
 					</div>
-					<div class="sub-col-4 list fade-in fade-up">
+					<div class="sub-col-4 list animate fade-up">
 						<div class="block-title">Plain List <code>.list--plain</code></div>
 						<ul class="list--plain">
 							<li>Eu non.</li>

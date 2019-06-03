@@ -1,0 +1,25 @@
+@mixin fade-in {
+	transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+@mixin fade-up {
+	transform: translateY(3em);
+	@include fade-in;
+}
+
+@mixin fade-down {
+	transform: translateY(-3em);
+	@include fade-in;
+}
+
+@mixin fade-left {
+	transform: translateX(3em);
+	@include fade-in;
+}
+
+@mixin fade-right {
+	transform: translateX(-3em);
+	@include fade-in;
+}

@@ -3,44 +3,42 @@
 	@include load-in;
 }
 
-.load-in-left {
-	@include load-in-left;
+.load-left {
+	@include load-left;
 }
 
-.load-in-right {
-	@include load-in-right;
+.load-right {
+	@include load-right;
 }
 
-.load-in-up {
-	@include load-in-up;
+.load-up {
+	@include load-up;
 }
 
-.load-in-down {
-	@include load-in-down;
+.load-down {
+	@include load-down;
 }
 
 // triggers when element is in
 // this section is attached to some JS
 .fade-in {
-	transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
-	opacity: 0;
-	visibility: hidden;
+	@include fade-in;
 }
 
 .fade-up {
-	transform: translateY(3em);
+	@include fade-up;
 }
 
 .fade-down {
-	transform: translateY(-3em);
+	@include fade-down;
 }
 
 .fade-left {
-	transform: translateX(-3em);
+	@include fade-left;
 }
 
 .fade-right {
-	transform: translateX(3em);
+	@include fade-right;
 }
 
 // Gets attached on '.fade-in' when elememnt is in view.

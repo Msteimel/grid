@@ -1,0 +1,63 @@
+// staggered fade in based on number of elements
+@mixin stagger-fade-in($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-child(#{$i}).fade-in {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-up($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-child(#{$i}).fade-up {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-up-reverse($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-last-child(#{$i}).fade-up {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-down($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-child(#{$i}).fade-down {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-down-reverse($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-last-child(#{$i}).fade-down {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-left($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-child(#{$i}).fade-left {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin stagger-fade-right($num, $delay: 0.25s) {
+	@for $i from 1 through $num {
+		&:nth-child(#{$i}).fade-right {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}

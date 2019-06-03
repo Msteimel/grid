@@ -1,5 +1,29 @@
-.heading {
-	@include stagger-fade-down(7);
+.stagger-in {
+	@include stagger-fade-in(6);
+}
+
+.stagger-up {
+	@include stagger-fade-up(6);
+}
+
+.stagger-up-reverse {
+	@include stagger-fade-up-reverse(6);
+}
+
+.stagger-down {
+	@include stagger-fade-down(6);
+}
+
+.stagger-down-reverse {
+	@include stagger-fade-down-reverse(6);
+}
+
+.stagger-left {
+	@include stagger-fade-left(6);
+}
+
+.stagger-right {
+	@include stagger-fade-right(6);
 }
 
 .list {
