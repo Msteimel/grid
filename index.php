@@ -7,7 +7,7 @@
 		<?php include 'includes/global/header/index.php';?>
 		<div class="grid">
 			<div class="col-12">
-				<div class="hero-content fade-right">
+				<div class="hero-content fade-down-right fade">
 					<h1 class="hero--headline">Another Dumb Framework</h1>
 					<p>I built this to challenge myself and learn more about frameworks and element design.</p>
 				</div>
@@ -26,7 +26,7 @@
 			<section class="space-large">
 				<div class="sub-col-6">
 					<div class="block-title">Headings</div>
-					<div class="stagger-fade-up-reverse">
+					<div class="heading-list stagger-fade-right">
 						<h1>Heading 1</h1>
 						<h2>Heading 2</h2>
 						<h3>Heading 3</h3>

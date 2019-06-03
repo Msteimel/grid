@@ -41,9 +41,18 @@
 	@include fade-right;
 }
 
-// Gets attached on '.fade-in' when elememnt is in view.
-.in-view {
-	opacity: 1;
-	transform: translate(0, 0);
-	visibility: visible;
+.fade-up-left {
+	@include fade-up-left;
+}
+
+.fade-down-left {
+	@include fade-down-left;
+}
+
+.fade-up-right {
+	@include fade-up-right;
+}
+
+.fade-down-right {
+	@include fade-down-right;
 }

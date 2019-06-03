@@ -1,31 +1,11 @@
-.stagger-in {
-	@include stagger-fade-in(6);
-}
-
-.stagger-up {
-	@include stagger-fade-up(6);
-}
-
-.stagger-up-reverse {
-	@include stagger-fade-up-reverse(6);
-}
-
-.stagger-down {
-	@include stagger-fade-down(6);
-}
-
-.stagger-down-reverse {
-	@include stagger-fade-down-reverse(6);
-}
-
-.stagger-left {
-	@include stagger-fade-left(6);
-}
-
-.stagger-right {
+.heading-list {
 	@include stagger-fade-right(6);
 }
 
 .list {
 	@include stagger-fade-up(3);
+}
+
+.hero-fade {
+	@include custom-fade(-3rem, 2rem);
 }
