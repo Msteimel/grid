@@ -16,7 +16,6 @@ This mixin allows you to do the same as all the others with customization
 }
 
 // Main Directions
-
 @mixin fade-up {
 	transform: translateY(3rem);
 	@include fade-in;

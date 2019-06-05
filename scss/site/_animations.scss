@@ -3,9 +3,9 @@
 }
 
 .list {
-	@include stagger-fade-up(3);
+	@include stagger-fade(3, 0, 3rem);
 }
 
 .hero-fade {
-	@include custom-fade(-3rem, 2rem);
+	@include custom-fade(3rem, 2rem);
 }

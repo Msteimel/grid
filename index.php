@@ -7,7 +7,7 @@
 		<?php include 'includes/global/header/index.php';?>
 		<div class="grid">
 			<div class="col-12">
-				<div class="hero-content fade-down-right fade">
+				<div class="hero-content hero-fade fade">
 					<h1 class="hero--headline">Another Dumb Framework</h1>
 					<p>I built this to challenge myself and learn more about frameworks and element design.</p>
 				</div>
@@ -59,8 +59,8 @@
 				</div>
 			</section>
 			<section class="space-med">
-				<div class="sub-grid">
-					<div class="sub-col-4 list animate fade-up">
+				<div class="sub-grid list stagger-fade">
+					<div class="sub-col-4">
 						<div class="block-title">Unordered List</div>
 						<ul>
 							<li>Dolore non nisi quis sit.</li>
@@ -68,7 +68,7 @@
 							<li>Lorem ipsum nulla duis incididunt.</li>
 						</ul>
 					</div>
-					<div class="sub-col-4 list animate fade-up">
+					<div class="sub-col-4">
 						<div class="block-title">Ordered List</div>
 						<ol>
 							<li>In amet esse nulla.</li>
@@ -76,7 +76,7 @@
 							<li>Et cupidatat dolor.</li>
 						</ol>
 					</div>
-					<div class="sub-col-4 list animate fade-up">
+					<div class="sub-col-4">
 						<div class="block-title">Plain List <code>.list--plain</code></div>
 						<ul class="list--plain">
 							<li>Eu non.</li>
