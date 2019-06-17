@@ -26,7 +26,7 @@
 			<section class="space-large">
 				<div class="sub-col-6">
 					<div class="block-title">Headings</div>
-					<div class="heading-list stagger-fade-right">
+					<div class="heading-list stagger-fade">
 						<h1>Heading 1</h1>
 						<h2>Heading 2</h2>
 						<h3>Heading 3</h3>

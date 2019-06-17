@@ -1,0 +1,105 @@
+/* --------------------------------
+ANIMATIONS
+--------------------------------*/
+
+@mixin fade-in {
+	transition: transform 0.5s ease 0.25s, opacity 1s ease 0.25s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+// Single element animation
+
+@mixin custom-fade($x, $y) {
+	transform: translate($x, $y);
+	@include fade-in;
+}
+
+// multiple element animation
+
+@mixin stagger-fade($num, $x: 0, $y: 3rem, $delay: 0.25s) {
+	.stagger {
+		@include fade-in;
+		transform: translate($x, $y);
+	}
+
+	@for $i from 1 through $num {
+		.stagger:nth-child(#{$i}) {
+			transition: transform 0.5s ease $delay * $i,
+				opacity 1s ease $delay * $i;
+		}
+	}
+}
+
+@mixin load-in {
+	animation: load-in 1s ease-out forwards;
+}
+
+@mixin load-left {
+	animation: load-left 1s ease-out forwards;
+}
+
+@mixin load-right {
+	animation: load-right 1s ease-out forwards;
+}
+
+@mixin load-up {
+	animation: load-up 1s ease-out forwards;
+}
+
+@mixin load-down {
+	animation: load-down 1s ease-out forwards;
+}
+
+/* --------------------------------
+Utility Mixins
+--------------------------------*/
+@mixin position($position, $args) {
+	@each $o in top right bottom left {
+		$i: index($args, $o);
+		@if $i and
+			$i +
+			1 <=
+			length($args) and
+			type-of(nth($args, $i + 1)) ==
+			number
+		{
+			#{$o}: nth($args, $i + 1);
+		}
+	}
+	position: $position;
+}
+
+@mixin absolute($args: '') {
+	@include position(absolute, $args);
+}
+
+@mixin fixed($args: '') {
+	@include position(fixed, $args);
+}
+
+@mixin relative($args: '') {
+	@include position(relative, $args);
+}
+
+@mixin arrow($direction: down, $size: 5px, $color: #555) {
+	width: 0;
+	height: 0;
+	@if ($direction == left) {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+	} @else if ($direction == right) {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+	} @else if ($direction == down) {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+	} @else {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+	}
+}
