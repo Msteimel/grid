@@ -62,26 +62,30 @@
 @mixin responsive-text(
 	$min-font-size,
 	$max-font-size,
-	$min-vw: $min-viewport,
-	$max-vw: $max-viewport
+	$min-vw: $ml,
+	$max-vw: $dk
 ) {
+	$min-viewport: ($min-vw / 16) * 1em;
+	$max-viewport: ($max-vw / 16) * 1em;
+
 	$responsive-calc: calc(
 		#{px-calc($min-font-size)} + (
 				#{strip-unit(px-calc($max-font-size))} - #{strip-unit(
 						px-calc($min-font-size)
 					)}
-			) * (100vw - #{px-calc($min-vw)}) / (#{strip-unit(px-calc($max-vw))} -
-					#{strip-unit(px-calc($min-vw))})
+			) * (100vw - #{px-calc($min-viewport)}) / (#{strip-unit(
+						px-calc($max-viewport)
+					)} - #{strip-unit(px-calc($min-viewport))})
 	);
 
 	font-size: $min-font-size;
 	// Min width
-	@media screen and (min-width: $min-vw) {
+	@media screen and (min-width: $min-viewport) {
 		font-size: $responsive-calc;
 	}
 
 	// Max width
-	@media screen and (min-width: $max-vw) {
+	@media screen and (min-width: $max-viewport) {
 		font-size: $max-font-size;
 	}
 }
@@ -184,28 +188,3 @@ Positioning helpers
 @mixin img-ratio($width: 16, $height: 9) {
 	padding-top: percentage($width / $height);
 }
-
-// Arrows mixin
-
-@mixin arrow($direction: down, $size: 5px, $color: #555) {
-	width: 0;
-	height: 0;
-	@if ($direction == left) {
-		border-top: $size solid transparent;
-		border-bottom: $size solid transparent;
-		border-right: $size solid $color;
-	} @else if ($direction == right) {
-		border-top: $size solid transparent;
-		border-bottom: $size solid transparent;
-		border-left: $size solid $color;
-	} @else if ($direction == down) {
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-top: $size solid $color;
-	} @else {
-		border-left: $size solid transparent;
-		border-right: $size solid transparent;
-		border-bottom: $size solid $color;
-	}
-}
-
